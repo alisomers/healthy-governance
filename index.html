@@ -1,185 +1,310 @@
-<!DOCTYPE html>
+(<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future-Proof Healthcare Through AI Governance</title>
-    <style>
-        :root {
-            --primary-blue: #4f86c6;
-            --navy: #2D3748;
-            --light-grey: #f5f5f5;
-            --hover-blue: #cce0f5;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthcare AI Governance Framework</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
 
-        body {
-            margin: 0;
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-        }
+body {
+font-family: 'Inter', system-ui, -apple-system, sans-serif;
+line-height: 1.6;
+color: #1a1a1a;
+}
 
-        /* Hero Section */
-        .hero {
-            background: var(--primary-blue);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
+/* Hero Section */
+.hero {
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+color: white;
+padding: 6rem 2rem;
+text-align: center;
+}
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 1rem;
-        }
+.hero h1 {
+font-size: 3.5rem;
+margin-bottom: 1rem;
+line-height: 1.2;
+}
 
-        /* Content Sections */
-        .content-section {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 3rem 1rem;
-        }
+.hero p {
+font-size: 1.5rem;
+margin-bottom: 2rem;
+opacity: 0.9;
+}
 
-        .grey-bg {
-            background: var(--light-grey);
-        }
+/* Introduction Section */
+.intro {
+max-width: 1200px;
+margin: 4rem auto;
+padding: 0 2rem;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+}
 
-        /* Framework Cards */
-        .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
-        }
+.intro-card {
+background: white;
+padding: 2rem;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        .card {
-            background: white;
-            border-radius: 16px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
+/* Framework Section */
+.framework {
+max-width: 1200px;
+margin: 4rem auto;
+padding: 0 2rem;
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-            background: var(--hover-blue);
-        }
+.framework-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 2rem;
+}
 
-        /* Download Section */
-        .download-item {
-            background: white;
-            border-radius: 8px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.framework-section {
+background: white;
+padding: 2rem;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        /* Global Alignment */
-        .logo-bar {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            padding: 2rem;
-        }
+.framework-item {
+padding: 1rem;
+margin: 0.5rem 0;
+background: #f8f9fa;
+border-radius: 8px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
 
-        .logo-bar img {
-            height: 50px;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-        }
+.framework-item:hover {
+background: #e9ecef;
+transform: translateY(-2px);
+}
 
-        .logo-bar img:hover {
-            opacity: 1;
-        }
+/* Content Box */
+.content-box {
+display: none;
+background: white;
+padding: 2rem;
+margin-top: 2rem;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        /* Footer */
-        footer {
-            background: var(--navy);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
+.content-box.active {
+display: block;
+animation: fadeIn 0.3s ease;
+}
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 32px;
-            }
+/* Implementation Section */
+.implementation {
+max-width: 1200px;
+margin: 4rem auto;
+padding: 0 2rem;
+}
 
-            .cards-container {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+.council-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 2rem;
+margin-top: 2rem;
+}
+
+.toolkit-section {
+margin-top: 2rem;
+background: white;
+padding: 2rem;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Global Alignment Section */
+.global-alignment {
+background: #f8f9fa;
+padding: 4rem 2rem;
+text-align: center;
+}
+
+.partner-logos {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 2rem;
+margin-top: 2rem;
+}
+
+.logo-placeholder {
+width: 100px;
+height: 100px;
+background: white;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styles */
+.button {
+padding: 1rem 2rem;
+background: #4299e1;
+color: white;
+border: none;
+border-radius: 8px;
+font-weight: 500;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.button:hover {
+background: #3182ce;
+transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(10px); }
+to { opacity: 1; transform: translateY(0); }
+}
+</style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Future-Proof Healthcare Through AI Governance</h1>
-        <p>Transforming healthcare through adaptive AI oversight and innovation</p>
-    </section>
+<!-- Hero Section -->
+<section class="hero">
+<h1>Future-Proof Healthcare AI Governance</h1>
+<p>An Adaptive Framework for Safe, Ethical Innovation</p>
+<button class="button">Explore the Framework</button>
+</section>
 
-    <!-- Introduction Section -->
-    <section class="content-section">
-        <h2>Introduction</h2>
-        <p>[Introduction content from document]</p>
-        
-        <h2>The Problem</h2>
-        <p>[Problem content from document]</p>
-        
-        <h2>The Need</h2>
-        <p>[Need content from document]</p>
-        
-        <h2>The Opportunity</h2>
-        <p>[Opportunity content from document]</p>
-    </section>
+<!-- Introduction Section -->
+<section class="intro">
+<div class="intro-card">
+<h3>The Problem</h3>
+<p>Healthcare AI implementations lack consistent governance frameworks, creating risks for patient safety and privacy.</p>
+</div>
+<div class="intro-card">
+<h3>The Need</h3>
+<p>An adaptive, comprehensive approach to AI governance is essential as healthcare systems increasingly rely on AI technologies.</p>
+</div>
+<div class="intro-card">
+<h3>The Opportunity</h3>
+<p>Canada can lead globally in establishing ethical, safe, and scalable AI governance in healthcare.</p>
+</div>
+</section>
 
-    <!-- Framework Overview -->
-    <section class="grey-bg">
-        <div class="content-section">
-            <h2>Framework Overview</h2>
-            <div class="cards-container">
-                <!-- Lifecycle Stages Card -->
-                <div class="card">
-                    <h3>Lifecycle Stages</h3>
-                    [Content from document's Lifecycle Stages section]
-                </div>
+<!-- Framework Section -->
+<section class="framework">
+<h2>Framework Components</h2>
+<div class="framework-grid">
+<div class="framework-section">
+<h3>Lifecycle Stages</h3>
+<div class="framework-item" onclick="showContent('problem-definition')">Problem Definition</div>
+<div class="framework-item" onclick="showContent('data-collection')">Data Collection</div>
+<!-- Add other lifecycle stages -->
+</div>
+<div class="framework-section">
+<h3>Governance Pillars</h3>
+<div class="framework-item" onclick="showContent('data-ownership')">Data Ownership & Stewardship</div>
+<div class="framework-item" onclick="showContent('liability')">Liability & Accountability</div>
+<!-- Add other governance pillars -->
+</div>
+</div>
+<div id="content-box" class="content-box"></div>
+</section>
 
-                <!-- Governance Pillars Card -->
-                <div class="card">
-                    <h3>Governance Pillars</h3>
-                    [Content from document's Governance Pillars section]
-                </div>
+<!-- Implementation Section -->
+<section class="implementation">
+<h2>Implementation Support</h2>
+<div class="council-grid">
+<!-- Add council members -->
+</div>
+<div class="toolkit-section">
+<h3>Open Source Toolkit Downloads</h3>
+<!-- Add download buttons -->
+</div>
+</section>
 
-                <!-- Policy Recommendations Card -->
-                <div class="card">
-                    <h3>Policy Recommendations</h3>
-                    [Content from document's Policy Recommendations section]
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Global Alignment Section -->
+<section class="global-alignment">
+<h2>Built on Global Best Practices</h2>
+<div class="partner-logos">
+<!-- Add partner logos -->
+</div>
+</section>
 
-    <!-- Implementation Supports -->
-    <section class="content-section">
-        <h2>Implementation Supports</h2>
-        [Implementation Supports content from document]
-    </section>
+<script>
+function showContent(id) {
+const contentBox = document.getElementById('content-box');
+const content = getContent(id);
 
-    <!-- Global Alignment -->
-    <section class="grey-bg">
-        <div class="content-section">
-            <h2>Built on Global Best Practices</h2>
-            <div class="logo-bar">
-                [Logo placeholders for WHO, OECD, ISO, GDPR]
-            </div>
-        </div>
-    </section>
+contentBox.innerHTML = `
+<h3>${content.title}</h3>
+<div class="content-grid">
+<div>
+<h4>Description</h4>
+<p>${content.description}</p>
+</div>
+<div>
+<h4>Recommendations</h4>
+<ul>
+${content.recommendations.map(rec => `<li>${rec}</li>`).join('')}
+</ul>
+</div>
+<div>
+<h4>Risks & Mitigations</h4>
+${content.risks.map(risk => `
+<div>
+<p><strong>Risk:</strong> ${risk.risk}</p>
+<p><strong>Mitigation:</strong> ${risk.mitigation}</p>
+</div>
+`).join('')}
+</div>
+<div>
+<h4>Resources</h4>
+${content.resources.map(resource => `
+<button class="button">${resource}</button>
+`).join('')}
+</div>
+</div>
+`;
 
-    <!-- Footer -->
-    <footer>
-        <p>Join the movement to future-proof healthcare with adaptive AI governance.</p>
-        <button>Contact Us</button>
-    </footer>
+contentBox.classList.add('active');
+}
+
+function getContent(id) {
+// Add your content data here
+const content = {
+'problem-definition': {
+title: 'Problem Definition',
+description: 'Systematic approach to defining AI implementation scope and risks',
+recommendations: [
+'Establish multi-stakeholder advisory panels',
+'Conduct comprehensive risk assessments',
+'Define clear success metrics'
+],
+risks: [
+{
+risk: 'Incomplete stakeholder representation',
+mitigation: 'Mandatory stakeholder consultation process'
+}
+],
+resources: [
+'Risk Assessment Template',
+'Stakeholder Mapping Tool'
+]
+},
+// Add more content for other sections
+};
+
+return content[id];
+}
+</script>
 </body>
-</html>
+</html>)
