@@ -1,96 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Future-Proof Healthcare Through AI Governance</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Governance Framework</title>
+    <style>
+        /* Modern CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f8f9fa;
+        }
+
+        /* Modern Glass-morphism Navigation */
+        .nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-button {
+            padding: 0.5rem 1rem;
+            border: none;
+            background: transparent;
+            color: #2d3748;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-button:hover {
+            color: #4299e1;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section with Modern Gradient */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Framework Section with Card Grid */
+        .framework {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            display: none;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            width: 90%;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 15px;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Implementation Tools Section */
+        .implementation-tools {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            display: none;
+        }
+
+        /* Modern Button Styling */
+        .button {
+            padding: 1rem 2rem;
+            background: #4299e1;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: #3182ce;
+            transform: translateY(-2px);
+        }
+
+        /* Footer Styling */
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+    </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <button class="nav-button" onclick="showSection('hero')">Home</button>
+            <button class="nav-button" onclick="showSection('framework')">Framework</button>
+            <button class="nav-button" onclick="showSection('implementation-tools')">Implementation Tools</button>
+        </div>
+    </nav>
 
-<header>
-  <h1>Future-Proof Healthcare Through AI Governance</h1>
-</header>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Future-Proofing AI Governance in Healthcare</h1>
+            <p>A dynamic, adaptive framework for safety, innovation, and trust</p>
+            <button class="button" onclick="showSection('framework')">Explore Framework</button>
+        </div>
+    </section>
 
-<section>
-  <h2>Introduction</h2>
-  <p>Artificial intelligence (AI) is rapidly transforming healthcare. Adaptive, lifecycle-based governance is critical to ensuring that patient safety, equity, and system resilience are protected as AI adoption accelerates.</p>
-</section>
+    <!-- Framework Section -->
+    <section id="framework" class="framework">
+        <h2>Framework Components</h2>
+        <div class="card-grid">
+            <!-- Cards will be dynamically populated -->
+        </div>
+    </section>
 
-<section>
-  <h2>The Problem</h2>
-  <p>Existing policies often lag behind the dynamic, iterative development of AI systems. Static regulations cannot accommodate continuous learning algorithms, evolving data models, or shifting clinical contexts, leaving critical gaps in patient protections and liability frameworks.</p>
-</section>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="close-button" onclick="closeModal()">×</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
 
-<section>
-  <h2>The Need</h2>
-  <p>Healthcare systems require governance models that are flexible, risk-tiered, and lifecycle-aligned, ensuring oversight from AI conception through to decommissioning. Without this, both patients and providers face increased risk of harm, inequity, and distrust.</p>
-</section>
+    <!-- Implementation Tools Section -->
+    <section id="implementation-tools" class="implementation-tools">
+        <h2>Implementation Support Tools</h2>
+        <!-- Implementation tools content -->
+    </section>
 
-<section>
-  <h2>The Opportunity</h2>
-  <p>Canada has an opportunity to lead globally by adopting an Adaptive AI Governance Framework in healthcare that strengthens innovation, protects patient rights, and fosters ethical AI adoption at scale.</p>
-</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h3>About This Project</h3>
+                <p>An innovative approach to healthcare AI governance.</p>
+            </div>
+            <div>
+                <h3>Stay Informed</h3>
+                <p>Subscribe to our newsletter for updates.</p>
+            </div>
+            <div>
+                <h3>Acknowledgments</h3>
+                <p>OECD, WHO, ISO, Pan-Canadian Health Data Strategy</p>
+            </div>
+        </div>
+    </footer>
 
-<section>
-  <h2>Call to Action</h2>
-  <p>Healthcare organizations, regulators, and developers must work together to implement dynamic, participatory AI governance frameworks anchored in equity, safety, and transparency. Join the movement to future-proof healthcare through adaptive governance.</p>
-</section>
+    <script>
+        // Framework content data
+        const frameworkContent = {
+            "Problem Definition": {
+                title: "Problem Definition",
+                description: "Systematic approach to defining AI implementation scope and risks",
+                recommendations: [
+                    "Establish multi-stakeholder advisory panels",
+                    "Conduct comprehensive risk assessments",
+                    "Define clear success metrics"
+                ],
+                risks: [
+                    {
+                        risk: "Incomplete stakeholder representation",
+                        example: "AI diagnostic tool deployed without radiologist input",
+                        mitigation: "Mandatory stakeholder consultation process"
+                    }
+                ]
+            },
+            // Add more sections...
+        };
 
-<section>
-  <h2>Framework Overview</h2>
-  <div class="grid">
-    <div class="card" onclick="toggleContent('lifecycle')">Lifecycle Stages</div>
-    <div class="card" onclick="toggleContent('pillars')">Governance Pillars</div>
-    <div class="card" onclick="toggleContent('policy')">Policy Recommendations</div>
-  </div>
+        // Function to show different sections
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
 
-  <div id="lifecycle" class="content">
-    <h3>Lifecycle Stages</h3>
-    <ul>
-      <li>Problem Definition</li>
-      <li>Data Collection</li>
-      <li>Model Development</li>
-      <li>Deployment & Integration</li>
-      <li>Monitoring & Updating</li>
-      <li>Decommissioning</li>
-    </ul>
-  </div>
+        // Function to open modal with content
+        function openModal(content) {
+            const modal = document.getElementById('modal');
+            const modalContent = document.getElementById('modal-content');
+            
+            modalContent.innerHTML = `
+                <h2>${content.title}</h2>
+                <p>${content.description}</p>
+                <h3>Recommendations</h3>
+                <ul>
+                    ${content.recommendations.map(rec => `<li>${rec}</li>`).join('')}
+                </ul>
+                <h3>Risks and Mitigations</h3>
+                ${content.risks.map(risk => `
+                    <div>
+                        <h4>${risk.risk}</h4>
+                        <p>Example: ${risk.example}</p>
+                        <p>Mitigation: ${risk.mitigation}</p>
+                    </div>
+                `).join('')}
+            `;
+            
+            modal.style.display = 'block';
+        }
 
-  <div id="pillars" class="content">
-    <h3>Governance Pillars</h3>
-    <ul>
-      <li>Data Ownership & Stewardship</li>
-      <li>Liability & Accountability</li>
-      <li>Patient Privacy & Consent</li>
-      <li>Cybersecurity & Resilience</li>
-    </ul>
-  </div>
+        // Function to close modal
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
 
-  <div id="policy" class="content">
-    <h3>Policy Recommendations</h3>
-    <ul>
-      <li>Modernize PHIPA and PIPEDA for dynamic consent and AI risk-tiering</li>
-      <li>Mandate post-market AI surveillance and revalidation</li>
-      <li>Fund federated AI governance sandboxes and open-source toolkits</li>
-    </ul>
-  </div>
-</section>
+        // Initialize framework cards
+        function initializeFramework() {
+            const cardGrid = document.querySelector('.card-grid');
+            
+            for (const [key, content] of Object.entries(frameworkContent)) {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <h3>${content.title}</h3>
+                    <p>${content.description}</p>
+                    <button class="button" onclick="openModal(frameworkContent['${key}'])">Learn More</button>
+                `;
+                cardGrid.appendChild(card);
+            }
+        }
 
-<section>
-  <h2>Global Best Practices</h2>
-  <ul>
-    <li><a href="https://www.who.int/publications/i/item/9789240029200" target="_blank">WHO AI Governance Guidelines</a></li>
-    <li><a href="https://oecd.ai/en" target="_blank">OECD AI Principles</a></li>
-    <li><a href="https://www.iso.org/standard/81228.html" target="_blank">ISO/IEC 42001 AI Management Systems</a></li>
-  </ul>
-</section>
-
-<section>
-  <h2>Download Center (Coming Soon)</h2>
-  <p>Consent Form Template | Risk Audit Worksheet | Policy Brief Document</p>
-</section>
-
-<script src="script.js"></script>
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeFramework();
+            showSection('hero');
+        });
+    </script>
 </body>
 </html>
