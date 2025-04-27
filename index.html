@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Governance Framework</title>
+    <title>Healthcare AI Governance Framework</title>
     <style>
-        /* Modern CSS Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -16,63 +15,18 @@
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
             line-height: 1.6;
             color: #1a1a1a;
-            background: #f8f9fa;
         }
 
-        /* Modern Glass-morphism Navigation */
-        .nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-button {
-            padding: 0.5rem 1rem;
-            border: none;
-            background: transparent;
-            color: #2d3748;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .nav-button:hover {
-            color: #4299e1;
-            transform: translateY(-2px);
-        }
-
-        /* Hero Section with Modern Gradient */
+        /* Hero Section */
         .hero {
-            min-height: 100vh;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            display: flex;
-            align-items: center;
-            padding: 2rem;
-            margin-top: 60px;
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 6rem 2rem;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
             line-height: 1.2;
         }
@@ -83,77 +37,121 @@
             opacity: 0.9;
         }
 
-        /* Framework Section with Card Grid */
-        .framework {
+        /* Introduction Section */
+        .intro {
             max-width: 1200px;
-            margin: 2rem auto;
-            padding: 2rem;
-            display: none;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
         }
 
-        .card-grid {
+        .intro-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Framework Section */
+        .framework {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .framework-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .framework-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .framework-item {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: #f8f9fa;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .framework-item:hover {
+            background: #e9ecef;
+            transform: translateY(-2px);
+        }
+
+        /* Content Box */
+        .content-box {
+            display: none;
+            background: white;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-box.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* Implementation Section */
+        .implementation {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .council-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
 
-        .card {
+        .toolkit-section {
+            margin-top: 2rem;
             background: white;
-            border-radius: 15px;
             padding: 2rem;
+            border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
+        /* Global Alignment Section */
+        .global-alignment {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+            text-align: center;
         }
 
-        /* Modal Styling */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(5px);
-            z-index: 1000;
+        .partner-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
-        .modal-content {
+        .logo-placeholder {
+            width: 100px;
+            height: 100px;
             background: white;
-            width: 90%;
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-            border-radius: 15px;
-            position: relative;
-            max-height: 90vh;
-            overflow-y: auto;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .close-button {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* Implementation Tools Section */
-        .implementation-tools {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 2rem;
-            display: none;
-        }
-
-        /* Modern Button Styling */
+        /* Button Styles */
         .button {
             padding: 1rem 2rem;
             background: #4299e1;
@@ -170,163 +168,143 @@
             transform: translateY(-2px);
         }
 
-        /* Footer Styling */
-        .footer {
-            background: #2d3748;
-            color: white;
-            padding: 4rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <button class="nav-button" onclick="showSection('hero')">Home</button>
-            <button class="nav-button" onclick="showSection('framework')">Framework</button>
-            <button class="nav-button" onclick="showSection('implementation-tools')">Implementation Tools</button>
-        </div>
-    </nav>
-
     <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <h1>Future-Proofing AI Governance in Healthcare</h1>
-            <p>A dynamic, adaptive framework for safety, innovation, and trust</p>
-            <button class="button" onclick="showSection('framework')">Explore Framework</button>
+    <section class="hero">
+        <h1>Future-Proof Healthcare AI Governance</h1>
+        <p>An Adaptive Framework for Safe, Ethical Innovation</p>
+        <button class="button">Explore the Framework</button>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro">
+        <div class="intro-card">
+            <h3>The Problem</h3>
+            <p>Healthcare AI implementations lack consistent governance frameworks, creating risks for patient safety and privacy.</p>
+        </div>
+        <div class="intro-card">
+            <h3>The Need</h3>
+            <p>An adaptive, comprehensive approach to AI governance is essential as healthcare systems increasingly rely on AI technologies.</p>
+        </div>
+        <div class="intro-card">
+            <h3>The Opportunity</h3>
+            <p>Canada can lead globally in establishing ethical, safe, and scalable AI governance in healthcare.</p>
         </div>
     </section>
 
     <!-- Framework Section -->
-    <section id="framework" class="framework">
+    <section class="framework">
         <h2>Framework Components</h2>
-        <div class="card-grid">
-            <!-- Cards will be dynamically populated -->
+        <div class="framework-grid">
+            <div class="framework-section">
+                <h3>Lifecycle Stages</h3>
+                <div class="framework-item" onclick="showContent('problem-definition')">Problem Definition</div>
+                <div class="framework-item" onclick="showContent('data-collection')">Data Collection</div>
+                <!-- Add other lifecycle stages -->
+            </div>
+            <div class="framework-section">
+                <h3>Governance Pillars</h3>
+                <div class="framework-item" onclick="showContent('data-ownership')">Data Ownership & Stewardship</div>
+                <div class="framework-item" onclick="showContent('liability')">Liability & Accountability</div>
+                <!-- Add other governance pillars -->
+            </div>
+        </div>
+        <div id="content-box" class="content-box"></div>
+    </section>
+
+    <!-- Implementation Section -->
+    <section class="implementation">
+        <h2>Implementation Support</h2>
+        <div class="council-grid">
+            <!-- Add council members -->
+        </div>
+        <div class="toolkit-section">
+            <h3>Open Source Toolkit Downloads</h3>
+            <!-- Add download buttons -->
         </div>
     </section>
 
-    <!-- Modal -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <button class="close-button" onclick="closeModal()">×</button>
-            <div id="modal-content"></div>
+    <!-- Global Alignment Section -->
+    <section class="global-alignment">
+        <h2>Built on Global Best Practices</h2>
+        <div class="partner-logos">
+            <!-- Add partner logos -->
         </div>
-    </div>
-
-    <!-- Implementation Tools Section -->
-    <section id="implementation-tools" class="implementation-tools">
-        <h2>Implementation Support Tools</h2>
-        <!-- Implementation tools content -->
     </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-grid">
-            <div>
-                <h3>About This Project</h3>
-                <p>An innovative approach to healthcare AI governance.</p>
-            </div>
-            <div>
-                <h3>Stay Informed</h3>
-                <p>Subscribe to our newsletter for updates.</p>
-            </div>
-            <div>
-                <h3>Acknowledgments</h3>
-                <p>OECD, WHO, ISO, Pan-Canadian Health Data Strategy</p>
-            </div>
-        </div>
-    </footer>
 
     <script>
-        // Framework content data
-        const frameworkContent = {
-            "Problem Definition": {
-                title: "Problem Definition",
-                description: "Systematic approach to defining AI implementation scope and risks",
-                recommendations: [
-                    "Establish multi-stakeholder advisory panels",
-                    "Conduct comprehensive risk assessments",
-                    "Define clear success metrics"
-                ],
-                risks: [
-                    {
-                        risk: "Incomplete stakeholder representation",
-                        example: "AI diagnostic tool deployed without radiologist input",
-                        mitigation: "Mandatory stakeholder consultation process"
-                    }
-                ]
-            },
-            // Add more sections...
-        };
-
-        // Function to show different sections
-        function showSection(sectionId) {
-            document.querySelectorAll('section').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
-
-        // Function to open modal with content
-        function openModal(content) {
-            const modal = document.getElementById('modal');
-            const modalContent = document.getElementById('modal-content');
+        function showContent(id) {
+            const contentBox = document.getElementById('content-box');
+            const content = getContent(id);
             
-            modalContent.innerHTML = `
-                <h2>${content.title}</h2>
-                <p>${content.description}</p>
-                <h3>Recommendations</h3>
-                <ul>
-                    ${content.recommendations.map(rec => `<li>${rec}</li>`).join('')}
-                </ul>
-                <h3>Risks and Mitigations</h3>
-                ${content.risks.map(risk => `
+            contentBox.innerHTML = `
+                <h3>${content.title}</h3>
+                <div class="content-grid">
                     <div>
-                        <h4>${risk.risk}</h4>
-                        <p>Example: ${risk.example}</p>
-                        <p>Mitigation: ${risk.mitigation}</p>
+                        <h4>Description</h4>
+                        <p>${content.description}</p>
                     </div>
-                `).join('')}
+                    <div>
+                        <h4>Recommendations</h4>
+                        <ul>
+                            ${content.recommendations.map(rec => `<li>${rec}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Risks & Mitigations</h4>
+                        ${content.risks.map(risk => `
+                            <div>
+                                <p><strong>Risk:</strong> ${risk.risk}</p>
+                                <p><strong>Mitigation:</strong> ${risk.mitigation}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div>
+                        <h4>Resources</h4>
+                        ${content.resources.map(resource => `
+                            <button class="button">${resource}</button>
+                        `).join('')}
+                    </div>
+                </div>
             `;
             
-            modal.style.display = 'block';
+            contentBox.classList.add('active');
         }
 
-        // Function to close modal
-        function closeModal() {
-            document.getElementById('modal').style.display = 'none';
-        }
-
-        // Initialize framework cards
-        function initializeFramework() {
-            const cardGrid = document.querySelector('.card-grid');
+        function getContent(id) {
+            // Add your content data here
+            const content = {
+                'problem-definition': {
+                    title: 'Problem Definition',
+                    description: 'Systematic approach to defining AI implementation scope and risks',
+                    recommendations: [
+                        'Establish multi-stakeholder advisory panels',
+                        'Conduct comprehensive risk assessments',
+                        'Define clear success metrics'
+                    ],
+                    risks: [
+                        {
+                            risk: 'Incomplete stakeholder representation',
+                            mitigation: 'Mandatory stakeholder consultation process'
+                        }
+                    ],
+                    resources: [
+                        'Risk Assessment Template',
+                        'Stakeholder Mapping Tool'
+                    ]
+                },
+                // Add more content for other sections
+            };
             
-            for (const [key, content] of Object.entries(frameworkContent)) {
-                const card = document.createElement('div');
-                card.className = 'card';
-                card.innerHTML = `
-                    <h3>${content.title}</h3>
-                    <p>${content.description}</p>
-                    <button class="button" onclick="openModal(frameworkContent['${key}'])">Learn More</button>
-                `;
-                cardGrid.appendChild(card);
-            }
+            return content[id];
         }
-
-        // Initialize the page
-        document.addEventListener('DOMContentLoaded', () => {
-            initializeFramework();
-            showSection('hero');
-        });
     </script>
 </body>
 </html>
