@@ -55,52 +55,157 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Framework Section */
-.framework {
-max-width: 1200px;
-margin: 4rem auto;
-padding: 0 2rem;
+function getContent(id) {
+const content = {
+'problem-definition': {
+title: 'Problem Definition',
+description: 'Collaboratively define clinical problems AI systems will address, including acceptable risk thresholds and scope of use.',
+recommendations: [
+'Engage clinicians, patients, ethicists early in problem framing.',
+'Define clear success and safety metrics pre-development.',
+'Perform ethics review before model design.'
+],
+risks: [
+{
+risk: 'Misaligned problem definition leads to unsafe AI behavior (e.g., IBM Watson Oncology).',
+mitigation: 'Mandate stakeholder co-design and risk-benefit mapping.'
 }
-
-.framework-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 2rem;
+],
+resources: [
+'<a href="https://oecd.ai/en/dashboards" target="_blank">OECD AI Guidelines</a>'
+]
+},
+'data-collection': {
+title: 'Data Collection',
+description: 'Ensure collected datasets are representative, consented, secure, and auditable, minimizing bias and risks.',
+recommendations: [
+'Conduct bias audits on datasets.',
+'Apply dynamic consent mechanisms.',
+'Ensure data provenance and custodianship tracking.'
+],
+risks: [
+{
+risk: 'Biased datasets amplifying systemic health disparities (e.g., Science 2019 Risk Scoring Bias).',
+mitigation: 'Continuous bias auditing and diverse data sourcing.'
 }
-
-.framework-section {
-background: white;
-padding: 2rem;
-border-radius: 10px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+],
+resources: [
+'<a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank">NIST AI Risk Management Framework</a>'
+]
+},
+'model-development': {
+title: 'Model Development',
+description: 'Focus on building AI models with explainability, transparency, validation across multiple settings, and human interpretability.',
+recommendations: [
+'Perform multisite external validation studies.',
+'Document model logic and intended use clearly.',
+'Implement explainability-by-design principles.'
+],
+risks: [
+{
+risk: 'Overfitting to limited data causing generalization errors (e.g., Google Retinal AI project).',
+mitigation: 'Mandatory external validation on diverse patient populations.'
 }
-
-.framework-item {
-padding: 1rem;
-margin: 0.5rem 0;
-background: #f8f9fa;
-border-radius: 8px;
-cursor: pointer;
-transition: all 0.3s ease;
+],
+resources: [
+'<a href="https://www.iso.org/standard/81228.html" target="_blank">ISO/IEC 42001: AI Management Systems</a>'
+]
+},
+'deployment-integration': {
+title: 'Deployment & Integration',
+description: 'Integrate AI tools thoughtfully into clinical workflows with clear accountability, liability mapping, and human oversight mechanisms.',
+recommendations: [
+'Map and sign liability delineation contracts.',
+'Require human-in-the-loop review for high-risk decisions.',
+'Align AI workflows to clinical standards.'
+],
+risks: [
+{
+risk: 'Workflow mismatch and alert fatigue leading to clinical burnout.',
+mitigation: 'Human factors testing and iterative deployment pilots.'
 }
-
-.framework-item:hover {
-background: #e9ecef;
-transform: translateY(-2px);
+],
+resources: [
+'<a href="https://www.health.gov.on.ca/en/pro/programs/connectedcare/oht/" target="_blank">Ontario Health Teams AI Guidance</a>'
+]
+},
+'monitoring-updating': {
+title: 'Monitoring & Updating',
+description: 'Mandate continuous performance monitoring, post-deployment audits, drift detection, and revalidation of AI tools in practice.',
+recommendations: [
+'Annual performance revalidation.',
+'Real-world feedback loops from users.',
+'Automated drift detection systems for major updates.'
+],
+risks: [
+{
+risk: 'Performance decay over time unnoticed, harming patients (e.g., NEJM 2021 studies).',
+mitigation: 'Mandatory post-market surveillance frameworks.'
 }
-
-/* Content Box */
-.content-box {
-display: none;
-background: white;
-padding: 2rem;
-margin-top: 2rem;
-border-radius: 10px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+],
+resources: [
+'<a href="https://www.who.int/publications/i/item/9789240029200" target="_blank">WHO Guidance on AI Ethics and Governance</a>'
+]
+},
+'decommissioning': {
+title: 'Decommissioning',
+description: 'Safely retire or transition AI systems when they become outdated, unsafe, or redundant.',
+recommendations: [
+'Implement mandatory retirement reviews.',
+'Plan patient notification processes.',
+'Securely archive data and model histories.'
+],
+risks: [
+{
+risk: 'Outdated AI systems continuing to influence clinical decisions improperly.',
+mitigation: 'Scheduled decommissioning audits and sunset policies.'
 }
+],
+resources: [
+'<a href="https://canada.ca/en/government/system-digital/strategies/artificial-intelligence.html" target="_blank">Canada AI Policy Principles</a>'
+]
+},
+// GOVERNANCE PILLARS
+'data-ownership': {
+title: 'Data Ownership & Stewardship',
+description: 'Affirm patient ownership of health data; encourage federated stewardship approaches over centralized data monopolies.',
+recommendations: [
+'Implement federated data governance models.',
+'Ensure patients can control consent settings in real-time.',
+'Support decentralized, privacy-preserving AI architectures.'
+],
+risks: [
+{
+risk: 'Loss of patient control over sensitive health data.',
+mitigation: 'Enforce transparent patient consent dashboards and data access logs.'
+}
+],
+resources: [
+'<a href="https://oecd.ai/en/dashboards/canada" target="_blank">OECD Dashboard for AI in Canada</a>'
+]
+},
+'liability': {
+title: 'Liability & Accountability',
+description: 'Clearly distribute legal liability between developers, implementers, institutions, and clinical end-users of AI systems.',
+recommendations: [
+'Mandate liability assignment contracts pre-deployment.',
+'Clarify responsibility pathways in case of errors or harms.',
+'Adopt "human-in-the-loop" governance frameworks for critical tasks.'
+],
+risks: [
+{
+risk: 'Blame-shifting when AI systems cause harm without clear accountability.',
+mitigation: 'Shared accountability protocols across all actors.'
+}
+],
+resources: [
+'<a href="https://www.iso.org/obp/ui#iso:std:iso-iec:27001:ed-2:v1:en" target="_blank">ISO/IEC 27001: Information Security Standard</a>'
+]
+},
+// You would continue for 'Patient Privacy & Consent' and 'Cybersecurity & Resilience' similarly
+};
 
-.content-box.active {
-display: block;
-animation: fadeIn 0.3s ease;
+return content[id];
 }
 
 /* Implementation Section */
