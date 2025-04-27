@@ -6,10 +6,11 @@
     <title>Future-Proof Healthcare Through AI Governance</title>
     <style>
         :root {
-            --primary-blue: #4f86c6;
+            --primary-color: #4f86c6;
             --dark-navy: #2D3748;
-            --light-grey: #f5f5f5;
             --hover-blue: #cce0f5;
+            --white: #ffffff;
+            --light-grey: #f5f5f5;
         }
 
         body {
@@ -20,8 +21,8 @@
 
         /* Hero Section */
         .hero {
-            background-color: var(--primary-blue);
-            color: white;
+            background-color: var(--primary-color);
+            color: var(--white);
             padding: 4rem 2rem;
             text-align: center;
         }
@@ -51,7 +52,7 @@
         }
 
         .card {
-            background: white;
+            background: var(--white);
             border-radius: 16px;
             padding: 1.5rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -59,38 +60,37 @@
         }
 
         .card:hover {
-            background-color: var(--hover-blue);
             transform: translateY(-5px);
+            background-color: var(--hover-blue);
         }
 
         /* Download Section */
         .download-item {
-            background: white;
-            padding: 1rem;
-            margin: 1rem 0;
+            background: var(--white);
             border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .download-button {
-            background: var(--primary-blue);
-            color: white;
+            background-color: var(--primary-color);
+            color: var(--white);
             padding: 0.5rem 1rem;
             border-radius: 4px;
             text-decoration: none;
         }
 
         /* Footer */
-        footer {
+        .footer {
             background-color: var(--dark-navy);
-            color: white;
+            color: var(--white);
             padding: 2rem;
             text-align: center;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 32px;
@@ -112,19 +112,16 @@
     <!-- Introduction Section -->
     <section class="content-section">
         <h2>Introduction</h2>
-        <p>Artificial Intelligence (AI) is rapidly transforming healthcare, offering new capabilities in diagnosis, treatment planning, and system optimization...</p>
+        <p>Artificial Intelligence (AI) is rapidly transforming healthcare, offering new capabilities in diagnosis, treatment planning, and system optimization. However, healthcare AI poses unique governance challenges that demand adaptive oversight.</p>
         
         <h2>The Problem</h2>
-        <p>Current healthcare regulations, including PHIPA and PIPEDA, were not designed for self-evolving AI models...</p>
-        
-        <h2>The Need</h2>
-        <p>Healthcare requires an Adaptive AI Governance Framework...</p>
+        <p>Current healthcare regulations, including PHIPA and PIPEDA, were not designed for self-evolving AI models. Key gaps exist in post-deployment monitoring, dynamic patient consent, distributed liability, and cybersecurity resiliency.</p>
     </section>
 
     <!-- Framework Overview -->
     <section class="grey-bg">
         <div class="content-section">
-            <h2>Framework Overview</h2>
+            <h2>Adaptive AI Governance Framework</h2>
             <div class="cards-container">
                 <!-- Lifecycle Stages Card -->
                 <div class="card">
@@ -155,8 +152,8 @@
                     <h3>Policy Recommendations</h3>
                     <ul>
                         <li>Modernize Privacy Law</li>
-                        <li>National Implementation Supports</li>
-                        <li>Establish Governance Councils</li>
+                        <li>Establish AI Safety Councils</li>
+                        <li>Develop Governance Toolkits</li>
                     </ul>
                 </div>
             </div>
@@ -172,16 +169,16 @@
         </div>
         <div class="download-item">
             <span>Risk Audit Template</span>
-            <a href="#" class="download-button">Download Excel</a>
+            <a href="#" class="download-button">Download</a>
         </div>
         <div class="download-item">
             <span>Cyber Incident Response Playbook</span>
-            <a href="#" class="download-button">Download PDF</a>
+            <a href="#" class="download-button">Download</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <p>Join the movement to future-proof healthcare through adaptive AI governance</p>
         <button class="download-button">Get Involved</button>
     </footer>
