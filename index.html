@@ -6,11 +6,10 @@
     <title>Future-Proof Healthcare Through AI Governance</title>
     <style>
         :root {
-            --primary-color: #4f86c6;
-            --dark-navy: #2D3748;
-            --hover-blue: #cce0f5;
-            --white: #ffffff;
+            --primary-blue: #4f86c6;
+            --navy: #2D3748;
             --light-grey: #f5f5f5;
+            --hover-blue: #cce0f5;
         }
 
         body {
@@ -21,8 +20,8 @@
 
         /* Hero Section */
         .hero {
-            background-color: var(--primary-color);
-            color: var(--white);
+            background: var(--primary-blue);
+            color: white;
             padding: 4rem 2rem;
             text-align: center;
         }
@@ -40,7 +39,7 @@
         }
 
         .grey-bg {
-            background-color: var(--light-grey);
+            background: var(--light-grey);
         }
 
         /* Framework Cards */
@@ -52,7 +51,7 @@
         }
 
         .card {
-            background: var(--white);
+            background: white;
             border-radius: 16px;
             padding: 1.5rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -61,12 +60,12 @@
 
         .card:hover {
             transform: translateY(-5px);
-            background-color: var(--hover-blue);
+            background: var(--hover-blue);
         }
 
         /* Download Section */
         .download-item {
-            background: var(--white);
+            background: white;
             border-radius: 8px;
             padding: 1rem;
             margin-bottom: 1rem;
@@ -75,27 +74,38 @@
             align-items: center;
         }
 
-        .download-button {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
+        /* Global Alignment */
+        .logo-bar {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .logo-bar img {
+            height: 50px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo-bar img:hover {
+            opacity: 1;
         }
 
         /* Footer */
-        .footer {
-            background-color: var(--dark-navy);
-            color: var(--white);
+        footer {
+            background: var(--navy);
+            color: white;
             padding: 2rem;
             text-align: center;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 32px;
             }
-            
+
             .cards-container {
                 grid-template-columns: 1fr;
             }
@@ -106,81 +116,70 @@
     <!-- Hero Section -->
     <section class="hero">
         <h1>Future-Proof Healthcare Through AI Governance</h1>
-        <p>Transforming healthcare through adaptive AI governance frameworks</p>
+        <p>Transforming healthcare through adaptive AI oversight and innovation</p>
     </section>
 
     <!-- Introduction Section -->
     <section class="content-section">
         <h2>Introduction</h2>
-        <p>Artificial Intelligence (AI) is rapidly transforming healthcare, offering new capabilities in diagnosis, treatment planning, and system optimization. However, healthcare AI poses unique governance challenges that demand adaptive oversight.</p>
+        <p>[Introduction content from document]</p>
         
         <h2>The Problem</h2>
-        <p>Current healthcare regulations, including PHIPA and PIPEDA, were not designed for self-evolving AI models. Key gaps exist in post-deployment monitoring, dynamic patient consent, distributed liability, and cybersecurity resiliency.</p>
+        <p>[Problem content from document]</p>
+        
+        <h2>The Need</h2>
+        <p>[Need content from document]</p>
+        
+        <h2>The Opportunity</h2>
+        <p>[Opportunity content from document]</p>
     </section>
 
     <!-- Framework Overview -->
     <section class="grey-bg">
         <div class="content-section">
-            <h2>Adaptive AI Governance Framework</h2>
+            <h2>Framework Overview</h2>
             <div class="cards-container">
                 <!-- Lifecycle Stages Card -->
                 <div class="card">
                     <h3>Lifecycle Stages</h3>
-                    <ul>
-                        <li>Problem Definition</li>
-                        <li>Data Collection</li>
-                        <li>Model Development</li>
-                        <li>Deployment & Integration</li>
-                        <li>Monitoring & Updating</li>
-                        <li>Decommissioning</li>
-                    </ul>
+                    [Content from document's Lifecycle Stages section]
                 </div>
 
                 <!-- Governance Pillars Card -->
                 <div class="card">
                     <h3>Governance Pillars</h3>
-                    <ul>
-                        <li>Data Ownership & Stewardship</li>
-                        <li>Liability & Accountability</li>
-                        <li>Patient Privacy & Consent</li>
-                        <li>Cybersecurity & Resilience</li>
-                    </ul>
+                    [Content from document's Governance Pillars section]
                 </div>
 
                 <!-- Policy Recommendations Card -->
                 <div class="card">
                     <h3>Policy Recommendations</h3>
-                    <ul>
-                        <li>Modernize Privacy Law</li>
-                        <li>Establish AI Safety Councils</li>
-                        <li>Develop Governance Toolkits</li>
-                    </ul>
+                    [Content from document's Policy Recommendations section]
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Download Center -->
+    <!-- Implementation Supports -->
     <section class="content-section">
-        <h2>Governance Toolkit Downloads</h2>
-        <div class="download-item">
-            <span>Dynamic Consent Dashboard Template</span>
-            <a href="#" class="download-button">Coming Soon</a>
-        </div>
-        <div class="download-item">
-            <span>Risk Audit Template</span>
-            <a href="#" class="download-button">Download</a>
-        </div>
-        <div class="download-item">
-            <span>Cyber Incident Response Playbook</span>
-            <a href="#" class="download-button">Download</a>
+        <h2>Implementation Supports</h2>
+        [Implementation Supports content from document]
+    </section>
+
+    <!-- Global Alignment -->
+    <section class="grey-bg">
+        <div class="content-section">
+            <h2>Built on Global Best Practices</h2>
+            <div class="logo-bar">
+                [Logo placeholders for WHO, OECD, ISO, GDPR]
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <p>Join the movement to future-proof healthcare through adaptive AI governance</p>
-        <button class="download-button">Get Involved</button>
+    <footer>
+        <p>Join the movement to future-proof healthcare with adaptive AI governance.</p>
+        <button>Contact Us</button>
     </footer>
 </body>
 </html>
