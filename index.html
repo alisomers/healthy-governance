@@ -443,7 +443,7 @@ contentBox.innerHTML = `
 <div class="content-grid">
 <div><h4>Description</h4><p>${content.description}</p></div>
 <div><h4>Recommendations</h4><ul>${content.recommendations.map(rec => `<li>${rec}</li>`).join('')}</ul></div>
-<div><h4>Risks & Mitigations</h4><div><p><strong>Risk:</strong> ${content.risks[0].risk}</p><p><strong>${content.risks[0].example}</strong></p><p><strong>Mitigation:</strong> ${content.risks[0].mitigation}</p></div></div>
+<div><h4>Risks & Mitigations</h4><div><p><strong>Risk:</strong> ${content.risks[0].risk} <br> <em>${content.risks[0].example}</em></p><p><strong>Mitigation:</strong> ${content.risks[0].mitigation}</p></div></div>
 <div><h4>Resources</h4>${content.resources.map(resource => `<p>${resource}</p>`).join('')}</div>
 </div>
 `;
