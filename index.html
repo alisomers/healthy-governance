@@ -162,91 +162,222 @@ h2 { font-size: 2rem; margin-bottom: 1.5rem; font-weight: bold; color: #1a1a1a; 
 </section>
 
 <script>
+<script>
 function getContent(id) {
 const content = {
 'problem-definition': {
 title: 'Problem Definition',
 description: 'Define the clinical problems AI will address, involving diverse stakeholders to align objectives with patient safety, ethics, and care quality.',
-recommendations: ['Establish multi-disciplinary advisory groups early.', 'Conduct pre-design ethics and equity reviews.', 'Define acceptable risk thresholds.'],
-risks: [{ risk: 'Misaligned AI goals leading to unsafe deployments (ex. IBM Watson for Oncology incorrectly recommended unsafe cancer treatments due to incomplete real-world clinical data during initial design phase)', mitigation: 'Stakeholder-inclusive problem scoping and risk-benefit mapping.' }],
-resources: ['<a href="https://oecd.ai/en/dashboards" target="_blank">OECD AI Guidelines</a>']
+recommendations: [
+'Establish multi-disciplinary advisory groups early.',
+'Conduct pre-design ethics and equity reviews.',
+'Define acceptable risk thresholds.'
+],
+risks: [
+{ 
+risk: 'Misaligned AI goals leading to unsafe deployments (e.g., IBM Watson Oncology incorrectly recommending unsafe cancer treatments due to misaligned training data) — [Source: Stat News]', 
+mitigation: 'Stakeholder-inclusive problem scoping and risk-benefit mapping.' 
+}
+],
+resources: [
+'<a href="https://oecd.ai/en/dashboards" target="_blank">OECD AI Guidelines</a>'
+]
 },
 'data-collection': {
 title: 'Data Collection',
 description: 'Ensure data sourcing is representative, bias-audited, and consented under dynamic governance models supporting patient control.',
-recommendations: ['Perform bias audits at collection phase.', 'Implement dynamic consent frameworks.', 'Maintain detailed provenance logs.'],
-risks: [{ risk: 'Training AI on biased or incomplete datasets (ex. COVID-19 risk prediction algorithms performed worse for racial minorities because the training datasets lacked diverse patient samples)', mitigation: 'Mandatory pre-training data quality and equity audits.' }],
-resources: ['<a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank">NIST AI Risk Management Framework</a>']
+recommendations: [
+'Perform bias audits at collection phase.',
+'Implement dynamic consent frameworks.',
+'Maintain detailed provenance logs.'
+],
+risks: [
+{ 
+risk: 'Training AI on biased or incomplete datasets (e.g., COVID-19 risk models underperforming on racial minorities due to non-representative data) — [Source: Health Affairs]', 
+mitigation: 'Mandatory pre-training data quality and equity audits.' 
+}
+],
+resources: [
+'<a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank">NIST AI Risk Management Framework</a>'
+]
 },
 'model-development': {
 title: 'Model Development',
 description: 'Prioritize explainability, transparency, and multi-site validation to mitigate overfitting and support safe, reliable AI in healthcare settings.',
-recommendations: ['Integrate explainability-by-design.', 'Externally validate models before use.', 'Disclose model assumptions, risks, and biases.'],
-risks: [{ risk: 'Opaque models causing clinician distrust (ex. Google Health’s AI for diabetic retinopathy failed when deployed in rural Thailand because of different image quality than the training data)', mitigation: 'Human-readable model rationales and layered validation.' }],
-resources: ['<a href="https://www.iso.org/standard/81228.html" target="_blank">ISO/IEC 42001 AI Standard</a>']
+recommendations: [
+'Integrate explainability-by-design.',
+'Externally validate models before use.',
+'Disclose model assumptions, risks, and biases.'
+],
+risks: [
+{ 
+risk: 'Opaque models causing clinician distrust (e.g., Google Health diabetic retinopathy AI failed in Thailand due to image quality differences) — [Source: Nature]', 
+mitigation: 'Human-readable model rationales and layered validation.' 
+}
+],
+resources: [
+'<a href="https://www.iso.org/standard/81228.html" target="_blank">ISO/IEC 42001 AI Standard</a>'
+]
 },
 'deployment-integration': {
 title: 'Deployment & Integration',
 description: 'Align AI tool workflows to clinical practice standards, embed human-in-the-loop review, and ensure clearly delineated liability pathways.',
-recommendations: ['Pilot tools iteratively before full deployment.', 'Document shared clinical responsibility models.', 'Train users on fallback processes.'],
-risks: [{ risk: 'Poor integration causing decision fatigue (ex. A sepsis early warning AI system (Epic) caused alarm fatigue because it integrated poorly with clinical workflows, leading clinicians to ignore true alerts)', mitigation: 'Usability testing and iterative refinement during pilots.' }],
-resources: [<a href="https://nam.edu/artificial-intelligence-special-publication/" target="_blank">Artificial Intelligence in Health Care – NAM 2019</a>]
-},
-'monitoring-updating': {
+recommendations: [
+'Pilot tools iteratively before full deployment.',
+'Document shared clinical responsibility models.',
+'Train users on fallback processes.'
+],
+risks: [
+{ 
+risk: 'Poor integration causing decision fatigue (e.g., Epic sepsis prediction AI caused alarm fatigue and reduced clinical attention) — [Source: STAT News]', 
+mitigation: 'Usability testing and iterative refinement during pilots.' 
+}
+],
+resources: [
+'<a href="https://nam.edu/artificial-intelligence-special-publication/" target="_blank">NAM AI Deployment Blueprint</a>'
+]
+  'monitoring-updating': {
 title: 'Monitoring & Updating',
 description: 'Mandate continuous post-market surveillance, model drift detection, and re-validation against evolving clinical standards.',
-recommendations: ['Annual real-world performance revalidation.', 'Implement automated drift alarms.', 'Mandate incident reporting linked to AI performance.'],
-risks: [{ risk: 'Unnoticed performance decay harming patients (ex. No active monitoring of a stroke prediction algorithm in the UK led to a gradual loss of accuracy over 5 years, disproportionately affecting elderly patients)', mitigation: 'Post-deployment monitoring and drift-triggered audits.' }],
-resources: ['<a href="https://www.who.int/publications/i/item/9789240029200" target="_blank">WHO AI Governance Guidelines</a>']
+recommendations: [
+'Annual real-world performance revalidation.',
+'Implement automated drift alarms.',
+'Mandate incident reporting linked to AI performance.'
+],
+risks: [
+{ 
+risk: 'Unnoticed performance decay harming patients (e.g., Stroke prediction algorithms degraded over time without active monitoring in the UK) — [Source: NIHR]', 
+mitigation: 'Post-deployment monitoring and drift-triggered audits.' 
+}
+],
+resources: [
+'<a href="https://www.who.int/publications/i/item/9789240029200" target="_blank">WHO AI Governance Guidelines</a>'
+]
 },
 'decommissioning': {
 title: 'Decommissioning',
 description: 'Create responsible sunset plans for AI systems, ensuring safe retirement and transition without compromising patient care continuity.',
-recommendations: ['Publish decommissioning criteria at launch.', 'Notify patients/providers of AI retirement.', 'Securely archive AI models and outputs.'],
-risks: [{ risk: 'Outdated AI continuing unnoticed (ex. Older clinical decision support tools for antibiotic prescribing remained live even after updated resistance data invalidated them, risking unsafe treatment choices)', mitigation: 'Scheduled decommissioning audits and sunset reviews.' }],
-resources: ['<a href="https://www.canada.ca/en/government/system-digital/artificial-intelligence.html" target="_blank">Canada Digital Government AI Policy</a>']
+recommendations: [
+'Publish decommissioning criteria at launch.',
+'Notify patients/providers of AI retirement.',
+'Securely archive AI models and outputs.'
+],
+risks: [
+{ 
+risk: 'Outdated AI continuing unnoticed (e.g., Clinical decision support tools for antibiotics remained active despite resistance changes) — [Source: BMJ]', 
+mitigation: 'Scheduled decommissioning audits and sunset reviews.' 
+}
+],
+resources: [
+'<a href="https://www.canada.ca/en/government/system-digital/artificial-intelligence.html" target="_blank">Canada Digital AI Policy</a>'
+]
 },
 'data-ownership': {
 title: 'Data Ownership & Stewardship',
 description: 'Ensure patients retain control over their health data throughout AI development, deployment, and use.',
-recommendations: ['Support patient consent dashboards.', 'Build federated, privacy-preserving data architectures.', 'Track all data use/access logs transparently.'],
-risks: [{ risk: 'Loss of patient trust due to opaque data sharing (ex. In the UK’s NHS data-sharing agreement with Google DeepMind (Royal Free Trust), patients were not properly informed about the use of their data, leading to public backlash and privacy violation findings)', mitigation: 'Radical transparency and consent renewals.' }],
-resources: ['<a href="https://oecd.ai/en/dashboards/canada" target="_blank">OECD AI Dashboard: Canada</a>']
+recommendations: [
+'Support patient consent dashboards.',
+'Build federated, privacy-preserving data architectures.',
+'Track all data use/access logs transparently.'
+],
+risks: [
+{ 
+risk: 'Loss of patient trust due to opaque data sharing (e.g., DeepMind Royal Free case where patients weren’t informed) — [Source: The Guardian]', 
+mitigation: 'Radical transparency and consent renewals.' 
+}
+],
+resources: [
+'<a href="https://oecd.ai/en/dashboards/canada" target="_blank">OECD AI Dashboard: Canada</a>'
+]
 },
 'liability': {
 title: 'Liability & Accountability',
 description: 'Assign clear shared liability across AI developers, vendors, institutions, and clinical users with enforceable contracts.',
-recommendations: ['Mandate shared liability frameworks.', 'Define human fallback oversight responsibilities.', 'Insurance policies tailored to AI-related incidents.'],
-risks: [{ risk: 'No clear accountability during AI-caused harm events (ex. An AI system incorrectly recommended emergency discharge for a patient who later died; legal proceedings became complex because there was no clear accountability split between software vendor and hospital)', mitigation: 'Pre-deployment contractual accountability frameworks.' }],
-resources: ['<a href="https://www.iso.org/obp/ui#iso:std:iso-iec:27001:ed-2:v1:en" target="_blank">ISO/IEC 27001 Security Standards</a>']
-},
+recommendations: [
+'Mandate shared liability frameworks.',
+'Define human fallback oversight responsibilities.',
+'Insurance policies tailored to AI-related incidents.'
+],
+risks: [
+{ 
+risk: 'No clear accountability during AI-caused harm events (e.g., Medical discharge errors caused complex legal battles) — [Source: Reuters]', 
+mitigation: 'Pre-deployment contractual accountability frameworks.' 
+}
+],
+resources: [
+'<a href="https://www.iso.org/obp/ui#iso:std:iso-iec:27001:ed-2:v1:en" target="_blank">ISO/IEC 27001 Security Standards</a>'
+]
 'privacy-consent': {
 title: 'Patient Privacy & Consent',
 description: 'Implement dynamic, tiered consent to allow patients ongoing control over how their data is used in evolving AI systems.',
-recommendations: ['Deploy patient-facing consent portals.', 'Enable granular opt-outs by service or dataset.', 'Audit consent use compliance annually.'],
-risks: [{ risk: 'Secondary use of data without reconsent (ex. A mental health chatbot company shared sensitive patient disclosures with third parties without consent, raising serious privacy concerns)', mitigation: 'Dynamic consent linked to data-use auditing tools.' }],
-resources: ['<a href="https://gdpr.eu/" target="_blank">GDPR Privacy by Design</a>']
+recommendations: [
+'Deploy patient-facing consent portals.',
+'Enable granular opt-outs by service or dataset.',
+'Audit consent use compliance annually.'
+],
+risks: [
+{ 
+risk: 'Secondary use of data without reconsent (e.g., Mental health chatbots sharing user data with third parties) — [Source: Washington Post]', 
+mitigation: 'Dynamic consent linked to data-use auditing tools.' 
+}
+],
+resources: [
+'<a href="https://gdpr.eu/" target="_blank">GDPR Privacy by Design</a>'
+]
 },
 'cybersecurity-resilience': {
 title: 'Cybersecurity & Resilience',
 description: 'Harden AI systems against adversarial attacks, model tampering, and cyber vulnerabilities at every lifecycle stage.',
-recommendations: ['Mandate adversarial robustness testing.', 'Develop AI-specific cyber incident response plans.', 'Isolate and encrypt sensitive AI models.'],
-risks: [{ risk: 'Model poisoning or privacy breach attacks (ex. Ransomware attacks on hospitals (e.g., 2021 Ireland Health Service ransomware attack) disabled access to patient records for weeks, affecting care continuity and patient safety)', mitigation: 'Periodic penetration testing and model robustness scoring.' }],
-resources: ['<a href="https://www.iso.org/standard/81228.html" target="_blank">ISO/IEC 42001 Security for AI Systems</a>']
+recommendations: [
+'Mandate adversarial robustness testing.',
+'Develop AI-specific cyber incident response plans.',
+'Isolate and encrypt sensitive AI models.'
+],
+risks: [
+{ 
+risk: 'Model poisoning or privacy breach attacks (e.g., 2021 ransomware attack on Ireland’s Health Service Executive) — [Source: BBC]', 
+mitigation: 'Periodic penetration testing and model robustness scoring.' 
+}
+],
+resources: [
+'<a href="https://www.iso.org/standard/81228.html" target="_blank">ISO/IEC 42001 Security for AI Systems</a>'
+]
 },
 'legislative-reforms': {
 title: 'Legislative and Regulatory Reforms',
 description: 'Modernize PHIPA/PIPEDA and national healthcare regulations to address AI-specific challenges in liability, privacy, and post-deployment accountability.',
-recommendations: ['Create risk-tiered AI regulatory pathways.', 'Mandate dynamic consent and lifecycle compliance checks.', 'Update data protection laws to account for continuously learning systems.'],
-risks: [{ risk: 'Static regulations failing against dynamic AI risks (ex. The Theranos scandal highlighted how regulatory gaps around laboratory-developed testing technologies (and their software AI overlays) created public health risks)', mitigation: 'Laws requiring periodic AI policy re-evaluation tied to technical developments.' }],
-resources: ['<a href="https://www.canada.ca/en/health-canada/services/health-canada-modernization/artificial-intelligence.html" target="_blank">Health Canada AI Policy Strategy</a>']
+recommendations: [
+'Create risk-tiered AI regulatory pathways.',
+'Mandate dynamic consent and lifecycle compliance checks.',
+'Update data protection laws to account for continuously learning systems.'
+],
+risks: [
+{ 
+risk: 'Static regulations failing against dynamic AI risks (e.g., Regulatory gaps during the Theranos scandal) — [Source: New York Times]', 
+mitigation: 'Laws requiring periodic AI policy re-evaluation tied to technical developments.' 
+}
+],
+resources: [
+'<a href="https://www.canada.ca/en/health-canada/services/health-canada-modernization/artificial-intelligence.html" target="_blank">Health Canada AI Policy Strategy</a>'
+]
 },
 'system-supports': {
 title: 'System Implementation Supports',
 description: 'Establish governance councils, AI health sandboxes, and open-source toolkits to operationalize safe and ethical AI healthcare innovation.',
-recommendations: ['Fund national AI health sandboxes for real-world testing.', 'Support Health Canada and CIHR advisory groups.', 'Distribute open-source risk audit and consent management tools.'],
-risks: [{ risk: 'Fragmented, inconsistent local AI governance across regions (Early national rollouts of AI-based COVID triage chatbots in Europe (without common standards) created wildly variable risk stratifications and confusion for public health authorities)', mitigation: 'Pan-Canadian governance council establishment and toolkit sharing.' }],
-resources: ['<a href="https://cihr-irsc.gc.ca/e/193.html" target="_blank">CIHR AI Health Initiatives</a>']
+recommendations: [
+'Fund national AI health sandboxes for real-world testing.',
+'Support Health Canada and CIHR advisory groups.',
+'Distribute open-source risk audit and consent management tools.'
+],
+risks: [
+{ 
+risk: 'Fragmented, inconsistent local AI governance across regions (e.g., Disjointed COVID-19 chatbot deployments across Europe) — [Source: Lancet Digital Health]', 
+mitigation: 'Pan-Canadian governance council establishment and toolkit sharing.' 
+}
+],
+resources: [
+'<a href="https://cihr-irsc.gc.ca/e/193.html" target="_blank">CIHR AI Health Initiatives</a>'
+]
 }
 };
 return content[id];
@@ -307,3 +438,5 @@ contentBox.classList.add('active');
 }
 }
 </script>
+
+
