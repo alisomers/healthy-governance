@@ -3,158 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Healthcare AI Governance Framework</title>
+<title>Future-Proof Healthcare AI Governance Framework</title>
 <style>
-/* YOUR STYLES (same as you provided) */
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-body {
-font-family: 'Inter', system-ui, -apple-system, sans-serif;
-line-height: 1.6;
-color: #1a1a1a;
-}
-
-.hero {
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-color: white;
-padding: 6rem 2rem;
-text-align: center;
-}
-
-.hero h1 {
-font-size: 3.5rem;
-margin-bottom: 1rem;
-line-height: 1.2;
-}
-
-.hero p {
-font-size: 1.5rem;
-margin-bottom: 2rem;
-opacity: 0.9;
-}
-
-.intro {
-max-width: 1200px;
-margin: 4rem auto;
-padding: 0 2rem;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 2rem;
-}
-
-.intro-card {
-background: white;
-padding: 2rem;
-border-radius: 10px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.framework {
-max-width: 1200px;
-margin: 4rem auto;
-padding: 0 2rem;
-}
-
-.framework-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 2rem;
-}
-
-.framework-section {
-background: white;
-padding: 2rem;
-border-radius: 10px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.framework-item {
-padding: 1rem;
-margin: 0.5rem 0;
-background: #f8f9fa;
-border-radius: 8px;
-cursor: pointer;
-transition: all 0.3s ease;
-}
-
-.framework-item:hover {
-background: #e9ecef;
-transform: translateY(-2px);
-}
-
-.content-box {
-display: none;
-background: white;
-padding: 2rem;
-margin-top: 2rem;
-border-radius: 10px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.content-box.active {
-display: block;
-animation: fadeIn 0.3s ease;
-}
-
-.implementation {
-max-width: 1200px;
-margin: 4rem auto;
-padding: 0 2rem;
-}
-
-.council-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 2rem;
-margin-top: 2rem;
-}
-
-.toolkit-section {
-margin-top: 2rem;
-background: white;
-padding: 2rem;
-border-radius: 10px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.global-alignment {
-background: #f8f9fa;
-padding: 4rem 2rem;
-text-align: center;
-}
-
-.partner-logos {
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 1rem;
-margin-top: 2rem;
-}
-
-.button {
-padding: 1rem 2rem;
-background: #4299e1;
-color: white;
-border: none;
-border-radius: 8px;
-font-weight: 500;
-cursor: pointer;
-transition: all 0.3s ease;
-}
-
-.button:hover {
-background: #3182ce;
-transform: translateY(-2px);
-}
-
-@keyframes fadeIn {
-from { opacity: 0; transform: translateY(10px); }
-to { opacity: 1; transform: translateY(0); }
-}
+/* --- Your Existing Styles --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; line-height: 1.6; color: #1a1a1a; background: #f7fafc; }
+.hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 6rem 2rem; text-align: center; }
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; line-height: 1.2; }
+.hero p { font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.9; }
+.intro-expanded, .intro, .framework, .implementation, .global-alignment { max-width: 1200px; margin: 4rem auto; padding: 0 2rem; }
+.intro-expanded h2 { font-size: 2rem; margin-bottom: 1rem; }
+.intro-expanded p { margin-bottom: 2rem; }
+.intro { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.intro-card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+.framework-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+.framework-section { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+.framework-item { padding: 1rem; margin: 0.5rem 0; background: #f8f9fa; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; }
+.framework-item:hover { background: #e9ecef; transform: translateY(-2px); }
+.content-box { display: none; background: white; padding: 2rem; margin-top: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+.content-box.active { display: block; animation: fadeIn 0.3s ease; }
+.council-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
+.toolkit-section { margin-top: 2rem; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+.global-alignment { background: #f8f9fa; padding: 4rem 2rem; text-align: center; }
+.partner-logos { display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-top: 2rem; }
+.button { padding: 1rem 2rem; background: #4299e1; color: white; border: none; border-radius: 8px; font-weight: 500; cursor: pointer; transition: all 0.3s ease; }
+.button:hover { background: #3182ce; transform: translateY(-2px); }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 </style>
 </head>
 
@@ -162,29 +36,47 @@ to { opacity: 1; transform: translateY(0); }
 
 <!-- Hero Section -->
 <section class="hero">
-<h1>Future-Proof Healthcare AI Governance</h1>
-<p>An Adaptive Framework for Safe, Ethical Innovation</p>
+  <h1>Future-Proof Healthcare AI Governance</h1>
+  <p>An Adaptive Framework for Safe, Ethical Innovation</p>
 </section>
 
-<!-- Introduction Section -->
+<!-- Introduction Section (Expanded) -->
+<section class="intro-expanded">
+  <h2>Introduction</h2>
+  <p>Artificial Intelligence (AI) is rapidly transforming healthcare, offering new capabilities in diagnosis, treatment planning, and system optimization. However, healthcare AI poses unique governance challenges: iterative learning, dynamic datasets, opaque models, and patient privacy risks demand more than static regulatory frameworks. Without adaptive oversight, both clinical outcomes and public trust are at risk.</p>
+
+  <h2>The Problem</h2>
+  <p>Current healthcare regulations, including PHIPA and PIPEDA, were not designed for self-evolving AI models. Gaps exist in post-deployment monitoring, dynamic patient consent, distributed liability, and cybersecurity resiliency. Traditional "one-time" approvals leave systems vulnerable to performance decay and ethical breaches.</p>
+
+  <h2>The Need</h2>
+  <p>Healthcare requires an Adaptive AI Governance Framework: built around the AI lifecycle, risk-tiered and context-specific, embedding human oversight continuously, and addressing consent, bias, accountability, and cybersecurity at every stage.</p>
+
+  <h2>The Opportunity</h2>
+  <p>Canada can lead globally by adopting a future-proof model: safeguarding patient safety and equity, enabling trustworthy innovation, and creating exportable governance standards for global health AI.</p>
+
+  <h2>Call to Action</h2>
+  <p>We call on policymakers, healthcare leaders, technology developers, and researchers to implement lifecycle-aligned, risk-adaptive governance for all AI healthcare systems, modernize consent and accountability frameworks, and support national governance councils and open-source toolkit development.</p>
+</section>
+
+<!-- Existing Intro Cards Section -->
 <section class="intro">
-<div class="intro-card">
-<h3>The Problem</h3>
-<p>Healthcare AI systems often outpace regulatory safeguards, leaving gaps in patient safety, accountability, and equity protections.</p>
-</div>
-<div class="intro-card">
-<h3>The Need</h3>
-<p>Healthcare demands lifecycle-aligned, risk-adaptive governance frameworks to manage evolving AI systems responsibly.</p>
-</div>
-<div class="intro-card">
-<h3>The Opportunity</h3>
-<p>Canada can lead globally by establishing a dynamic, patient-centered, future-proof AI governance model that others can follow.</p>
-</div>
+  <div class="intro-card">
+    <h3>The Problem</h3>
+    <p>Healthcare AI implementations lack consistent governance frameworks, creating risks for patient safety and privacy.</p>
+  </div>
+  <div class="intro-card">
+    <h3>The Need</h3>
+    <p>An adaptive, comprehensive approach to AI governance is essential as healthcare systems increasingly rely on AI technologies.</p>
+  </div>
+  <div class="intro-card">
+    <h3>The Opportunity</h3>
+    <p>Canada can lead globally in establishing ethical, safe, and scalable AI governance in healthcare.</p>
+  </div>
 </section>
 
 <!-- Framework Section -->
 <section class="framework">
-<h2>Framework Components</h2>
+<h2>Adaptive AI Governance Framework</h2>
 <div class="framework-grid">
 <div class="framework-section">
 <h3>Lifecycle Stages</h3>
@@ -207,16 +99,16 @@ to { opacity: 1; transform: translateY(0); }
 <div id="content-box" class="content-box"></div>
 </section>
 
-<!-- Implementation Section -->
+<!-- Implementation Support -->
 <section class="implementation">
 <h2>Implementation Supports</h2>
-<p>Key governance councils and bodies contributing to adaptive AI healthcare governance:</p>
+<p>Key councils contributing to adaptive AI governance:</p>
 <div class="council-grid">
 <div>Health Canada Digital Health Secretariat</div>
 <div>Canadian Institutes of Health Research (CIHR)</div>
 <div>Office of the Privacy Commissioner of Canada</div>
-<div>Ontario Health Teams AI Working Groups</div>
-<div>Canadian Standards Association (CSA AI Standard Committees)</div>
+<div>Ontario Health Teams AI Committees</div>
+<div>Canadian Standards Association (CSA Group)</div>
 </div>
 
 <div class="toolkit-section">
@@ -233,15 +125,16 @@ to { opacity: 1; transform: translateY(0); }
 <section class="global-alignment">
 <h2>Built on Global Best Practices</h2>
 <div class="partner-logos">
-<a href="https://www.who.int/publications/i/item/9789240029200" target="_blank">WHO Ethics and AI Governance Guidance</a>
-<a href="https://oecd.ai/en" target="_blank">OECD Principles on AI</a>
-<a href="https://www.iso.org/standard/81228.html" target="_blank">ISO/IEC 42001 AI Management Systems</a>
-<a href="https://gdpr.eu/" target="_blank">GDPR - Data Protection by Design</a>
+<a href="https://www.who.int/publications/i/item/9789240029200" target="_blank">WHO Ethics & AI Governance</a>
+<a href="https://oecd.ai/en" target="_blank">OECD AI Principles</a>
+<a href="https://www.iso.org/standard/81228.html" target="_blank">ISO/IEC 42001 AI Standards</a>
+<a href="https://gdpr.eu/" target="_blank">GDPR Data Protection by Design</a>
 </div>
 </section>
 
 <script>
-// function getContent(id) {
+// <script>
+function getContent(id) {
   const content = {
     // Lifecycle Stages
     'problem-definition': {
@@ -254,8 +147,8 @@ to { opacity: 1; transform: translateY(0); }
       ],
       risks: [
         {
-          risk: 'Misaligned problem definition leads to unsafe AI behavior (e.g., IBM Watson Oncology failures).',
-          mitigation: 'Mandate stakeholder co-design and risk-benefit mapping early in system planning.'
+          risk: 'Misaligned problem definition leading to unsafe AI behavior (e.g., IBM Watson Oncology failures).',
+          mitigation: 'Mandate stakeholder co-design and risk-benefit mapping early.'
         }
       ],
       resources: [
@@ -272,8 +165,8 @@ to { opacity: 1; transform: translateY(0); }
       ],
       risks: [
         {
-          risk: 'Biased datasets amplifying disparities (e.g., Science 2019 Risk Score bias study).',
-          mitigation: 'Regular bias audits and diverse, representative data sourcing.'
+          risk: 'Biased datasets amplifying health disparities (e.g., Science 2019 Risk Study).',
+          mitigation: 'Continuous bias audits and representative data sourcing.'
         }
       ],
       resources: [
@@ -282,169 +175,164 @@ to { opacity: 1; transform: translateY(0); }
     },
     'model-development': {
       title: 'Model Development',
-      description: 'Focus on explainability, transparency, and rigorous multi-site external validation.',
+      description: 'Prioritize explainability, transparency, and robust multi-site validation before deployment.',
       recommendations: [
         'Conduct multi-institutional validation studies.',
-        'Prioritize explainability-by-design in all models.',
-        'Clearly define intended use and risk scenarios.'
+        'Adopt explainability-by-design principles.',
+        'Clearly define system limitations and uses.'
       ],
       risks: [
         {
-          risk: 'Overfitting to narrow datasets (e.g., Google Retinal Project underperformance).',
-          mitigation: 'Mandatory external validation on multiple real-world datasets.'
+          risk: 'Overfitting risks and clinical deployment failures (e.g., Google Retinal AI underperformance).',
+          mitigation: 'External validation across multiple sites and populations.'
         }
       ],
       resources: [
-        '<a href="https://www.iso.org/standard/81228.html" target="_blank">ISO/IEC 42001 AI Management Systems</a>'
+        '<a href="https://www.iso.org/standard/81228.html" target="_blank">ISO/IEC 42001 AI Standard</a>'
       ]
     },
     'deployment-integration': {
       title: 'Deployment & Integration',
-      description: 'Careful workflow alignment, training, and clear delineation of human oversight roles are essential.',
+      description: 'Seamlessly integrate AI into clinical workflows, ensuring human oversight and liability clarity.',
       recommendations: [
-        'Sign liability delineation agreements pre-deployment.',
-        'Require human-in-the-loop checks for critical AI outputs.',
-        'Pilot AI integration gradually with clinician feedback loops.'
+        'Use human-in-the-loop supervision.',
+        'Define clinical fallback processes.',
+        'Conduct workflow usability testing.'
       ],
       risks: [
         {
-          risk: 'Poor workflow integration leading to burnout or alert fatigue.',
-          mitigation: 'Conduct usability and workflow impact testing before full rollout.'
+          risk: 'Workflow mismatches and clinical fatigue leading to adverse events.',
+          mitigation: 'Iterative piloting and clinician feedback integration.'
         }
       ],
       resources: [
-        '<a href="https://www.health.gov.on.ca/en/pro/programs/connectedcare/oht/" target="_blank">Ontario Health Teams Guidance</a>'
+        '<a href="https://www.health.gov.on.ca/en/pro/programs/connectedcare/oht/" target="_blank">Ontario Health Teams AI Guidelines</a>'
       ]
     },
     'monitoring-updating': {
       title: 'Monitoring & Updating',
-      description: 'Continuous performance auditing, drift detection, and model update governance is mandatory.',
+      description: 'Mandate continuous model monitoring, real-world validation, and alert systems for drift.',
       recommendations: [
-        'Mandate annual AI system performance revalidation.',
-        'Establish real-world data feedback loops.',
-        'Implement drift detection alarms for critical systems.'
+        'Set performance re-validation annually.',
+        'Integrate real-world data into AI audit cycles.',
+        'Enable continuous learning with safeguards.'
       ],
       risks: [
         {
-          risk: 'Silent AI performance decay causing harm (e.g., NEJM 2021 studies).',
-          mitigation: 'Ongoing post-market surveillance systems and patient outcome tracking.'
+          risk: 'Silent performance degradation over time.',
+          mitigation: 'Proactive surveillance and drift detection protocols.'
         }
       ],
       resources: [
-        '<a href="https://www.who.int/publications/i/item/9789240029200" target="_blank">WHO AI Governance Recommendations</a>'
+        '<a href="https://www.who.int/publications/i/item/9789240029200" target="_blank">WHO AI Governance Report</a>'
       ]
     },
     'decommissioning': {
       title: 'Decommissioning',
-      description: 'Proactively plan for safe AI retirement, migration, and patient communication on system sunset.',
+      description: 'Responsibly retire outdated AI systems and notify affected stakeholders.',
       recommendations: [
-        'Institute mandatory decommissioning reviews.',
-        'Notify patients and users when AI tools are retired.',
-        'Securely archive retired model histories for auditability.'
+        'Define sunset timelines at deployment.',
+        'Securely archive model outputs.',
+        'Communicate decommissioning to patients and providers.'
       ],
       risks: [
         {
-          risk: 'Outdated AI tools continuing to influence clinical decision-making.',
-          mitigation: 'Scheduled decommissioning audits and enforced system retirement timelines.'
+          risk: 'Old AI systems persisting in clinical workflows post-retirement.',
+          mitigation: 'Scheduled decommissioning audits and governance oversight.'
         }
       ],
       resources: [
-        '<a href="https://www.canada.ca/en/government/system-digital/artificial-intelligence.html" target="_blank">Government of Canada AI Policy</a>'
+        '<a href="https://canada.ca/en/government/system-digital/artificial-intelligence.html" target="_blank">Canada AI Policy</a>'
       ]
     },
     // Governance Pillars
     'data-ownership': {
       title: 'Data Ownership & Stewardship',
-      description: 'Patients should retain control over their data; governance must support federated stewardship.',
+      description: 'Patients must retain meaningful ownership and control over their health data in AI systems.',
       recommendations: [
-        'Implement decentralized, patient-centered data architectures.',
-        'Support real-time patient consent dashboards and access logs.',
-        'Incentivize federated learning and federated analytics models.'
+        'Implement decentralized, federated data stewardship models.',
+        'Support transparent access and dynamic consent dashboards.'
       ],
       risks: [
         {
-          risk: 'Loss of patient agency over sensitive personal health data.',
-          mitigation: 'Transparent governance and dynamic consent updates visible to users.'
+          risk: 'Data monopolization by vendors or hospitals.',
+          mitigation: 'Federated architectures with real-time patient permissions.'
         }
       ],
       resources: [
-        '<a href="https://oecd.ai/en/dashboards/canada" target="_blank">OECD Dashboard: AI in Canada</a>'
+        '<a href="https://oecd.ai/en/dashboards/canada" target="_blank">OECD AI Dashboard: Canada</a>'
       ]
     },
     'liability': {
       title: 'Liability & Accountability',
-      description: 'Responsibility must be shared between developers, vendors, institutions, and clinicians.',
+      description: 'Clearly distribute legal responsibility among developers, providers, and institutions.',
       recommendations: [
-        'Sign formalized AI liability contracts between all parties.',
-        'Adopt human-in-the-loop control models for clinical decision augmentation.',
-        'Define explicit clinical fallback mechanisms if AI fails.'
+        'Mandate multi-party AI liability contracts.',
+        'Embed explicit human fallback review for high-risk decisions.'
       ],
       risks: [
         {
-          risk: 'Blame avoidance or finger-pointing in cases of AI error or harm.',
-          mitigation: 'Shared accountability frameworks and insurance schemes for AI deployments.'
+          risk: 'Unclear accountability when AI systems fail.',
+          mitigation: 'Predefined incident pathways and joint risk insurance models.'
         }
       ],
       resources: [
-        '<a href="https://www.iso.org/obp/ui#iso:std:iso-iec:27001:ed-2:v1:en" target="_blank">ISO/IEC 27001: Information Security Management</a>'
+        '<a href="https://www.iso.org/obp/ui#iso:std:iso-iec:27001:ed-2:v1:en" target="_blank">ISO/IEC 27001 Information Security Standard</a>'
       ]
     },
     'privacy-consent': {
       title: 'Patient Privacy & Consent',
-      description: 'Modern AI governance requires dynamic, tiered consent models empowering patient control at all stages.',
+      description: 'Ensure dynamic, tiered consent for patient data use across the full AI lifecycle.',
       recommendations: [
-        'Develop dynamic consent dashboards for ongoing data use management.',
-        'Enable granular opt-in and opt-out at any stage of AI system lifecycle.',
-        'Audit consent use compliance annually.'
+        'Implement dynamic consent dashboards with opt-in/opt-out.',
+        'Review consent compliance annually.'
       ],
       risks: [
         {
-          risk: 'Data use beyond original consent scope leading to privacy breaches.',
-          mitigation: 'Mandate dynamic, user-controlled consent dashboards and transparent access reporting.'
+          risk: 'Secondary data use without updated patient consent.',
+          mitigation: 'Mandatory dynamic consent controls with user visibility.'
         }
       ],
       resources: [
-        '<a href="https://gdpr.eu/" target="_blank">GDPR Principles on Dynamic Consent and Privacy by Design</a>'
+        '<a href="https://gdpr.eu/" target="_blank">GDPR Data Protection Resources</a>'
       ]
     },
     'cybersecurity-resilience': {
       title: 'Cybersecurity & Resilience',
-      description: 'Proactive adversarial testing, security-by-design, and AI-specific incident response plans are essential.',
+      description: 'Embed security-by-design principles and conduct adversarial robustness testing.',
       recommendations: [
-        'Mandate adversarial robustness testing pre-deployment.',
-        'Develop cyber incident playbooks tailored to AI tools.',
-        'Ensure encrypted, segmented data environments for AI model training and inference.'
+        'Mandate adversarial penetration testing pre-deployment.',
+        'Develop rapid AI-specific incident response playbooks.'
       ],
       risks: [
         {
-          risk: 'Model poisoning, data leakage, or unauthorized system control attacks.',
-          mitigation: 'Periodic red-teaming exercises and AI-specific penetration tests.'
+          risk: 'Model poisoning or system hijacking by attackers.',
+          mitigation: 'Red-teaming exercises and layered model security defenses.'
         }
       ],
       resources: [
-        '<a href="https://www.iso.org/standard/81228.html" target="_blank">ISO/IEC 42001 AI Management System Standard</a>'
+        '<a href="https://www.iso.org/standard/81228.html" target="_blank">ISO/IEC 42001 Cybersecurity AI Management</a>'
       ]
     },
     'policy-recommendations': {
       title: 'Policy Recommendations',
-      description: 'Updating national healthcare laws, creating regulatory sandboxes, and funding implementation supports is urgent.',
+      description: 'Modernize laws and build system supports for adaptive governance and AI safety in healthcare.',
       recommendations: [
-        'Modernize PHIPA/PIPEDA to address AI-specific consent and liability gaps.',
-        'Create federated AI safety sandboxes for real-world testing.',
-        'Fund open-source governance toolkits for clinicians and developers.'
+        'Amend PHIPA/PIPEDA to address AI-specific risks.',
+        'Create federated AI testing sandboxes.',
+        'Fund open-source adaptive governance toolkits.'
       ],
       risks: [
         {
-          risk: 'Static regulatory environments becoming obsolete versus rapidly evolving AI tools.',
-          mitigation: 'Adopt risk-tiered, lifecycle-aligned adaptive governance frameworks.'
+          risk: 'Static regulatory frameworks failing to protect evolving AI.',
+          mitigation: 'Lifecycle-aligned, tiered oversight built into law.'
         }
       ],
       resources: [
-        '<a href="https://www.canada.ca/en/health-canada/services/health-canada-modernization/artificial-intelligence.html" target="_blank">Health Canada AI Policy Framework</a>'
+        '<a href="https://www.canada.ca/en/health-canada/services/health-canada-modernization/artificial-intelligence.html" target="_blank">Health Canada AI Strategy</a>'
       ]
     }
   };
-
   return content[id];
 }
 
@@ -452,40 +340,42 @@ function showContent(id) {
   const contentBox = document.getElementById('content-box');
   const content = getContent(id);
 
-  contentBox.innerHTML = `
-    <h3>${content.title}</h3>
-    <div class="content-grid">
-      <div>
-        <h4>Description</h4>
-        <p>${content.description}</p>
+  if (content) {
+    contentBox.innerHTML = `
+      <h3>${content.title}</h3>
+      <div class="content-grid">
+        <div>
+          <h4>Description</h4>
+          <p>${content.description}</p>
+        </div>
+        <div>
+          <h4>Recommendations</h4>
+          <ul>
+            ${content.recommendations.map(rec => `<li>${rec}</li>`).join('')}
+          </ul>
+        </div>
+        <div>
+          <h4>Risks & Mitigations</h4>
+          ${content.risks.map(risk => `
+            <div>
+              <p><strong>Risk:</strong> ${risk.risk}</p>
+              <p><strong>Mitigation:</strong> ${risk.mitigation}</p>
+            </div>
+          `).join('')}
+        </div>
+        <div>
+          <h4>Resources</h4>
+          ${content.resources.map(resource => `<p>${resource}</p>`).join('')}
+        </div>
       </div>
-      <div>
-        <h4>Recommendations</h4>
-        <ul>
-          ${content.recommendations.map(rec => `<li>${rec}</li>`).join('')}
-        </ul>
-      </div>
-      <div>
-        <h4>Risks & Mitigations</h4>
-        ${content.risks.map(risk => `
-          <div>
-            <p><strong>Risk:</strong> ${risk.risk}</p>
-            <p><strong>Mitigation:</strong> ${risk.mitigation}</p>
-          </div>
-        `).join('')}
-      </div>
-      <div>
-        <h4>Resources</h4>
-        ${content.resources.map(resource => `
-          <p>${resource}</p>
-        `).join('')}
-      </div>
-    </div>
-  `;
-
-  contentBox.classList.add('active');
+    `;
+    contentBox.classList.add('active');
+  }
 }
+</script>
+
 </script>
 
 </body>
 </html>
+
