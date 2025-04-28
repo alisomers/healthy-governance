@@ -7,31 +7,25 @@
 <style>
 /* --- Global Styles --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; line-height: 1.6; color: #1a1a1a; background: #f7fafc; }
+body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; color: #1a1a1a; background: #f7fafc; }
 
+/* Hero Section */
 .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 6rem 2rem; text-align: center; }
 .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
 .hero p { font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.9; }
 
+/* Section Headings */
+h2 { font-size: 2rem; margin-bottom: 1.5rem; font-weight: bold; color: #1a1a1a; }
+
+/* Intro & Framework Sections */
 .intro-expanded, .intro, .framework, .implementation, .global-alignment { max-width: 1200px; margin: 4rem auto; padding: 0 2rem; }
-.intro-expanded h2 { font-size: 2rem; margin-bottom: 1rem; }
-.intro-expanded p { margin-bottom: 2rem; }
+.intro-expanded p, .framework p, .implementation p, .global-alignment p { margin-bottom: 2rem; font-size: 1.1rem; }
+
+/* Cards */
 .intro { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 .intro-card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
 
-  <style>
-/* New consistent section heading styles */
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  font-weight: bold;
-  color: #1a1a1a;
-}
-.framework p {
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-}
-</style>
+/* Framework Cards */
 .framework-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 .framework-section { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
 .framework-item { padding: 1rem; margin: 0.5rem 0; background: #f8f9fa; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; }
@@ -40,11 +34,17 @@ h2 {
 .arrow { display: inline-block; margin-left: 8px; transform: rotate(90deg); opacity: 0; transition: all 0.3s ease; }
 .arrow.show { opacity: 1; transform: rotate(90deg) translateX(5px); }
 
+/* Expandable Content Box */
 .content-box { display: none; background: white; padding: 2rem; margin-top: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
 .content-box.active { display: block; animation: fadeIn 0.3s ease; }
 
+/* Implementation / Global Best Practices */
 .council-grid ul, .global-alignment ul { padding-left: 20px; }
 .toolkit-section { margin-top: 2rem; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+.toolkit-section div { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.toolkit-section div > div { flex: 1 1 45%; background: #f8f9fa; padding: 1rem; border-radius: 8px; text-align: center; }
+
+/* Animations */
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 </style>
 </head>
@@ -89,10 +89,8 @@ h2 {
 <!-- Framework Section -->
 <section class="framework">
 <h2>Adaptive AI Governance Framework</h2>
-  </div>
 <p>This framework guides users to apply governance measures at every phase of the AI lifecycle. Lifecycle Stages focus on technical development checkpoints, Governance Pillars ensure ethical and privacy protections, and Policy Recommendations advocate for system-wide reforms. Click through the sections below to expand and explore guidance, risks, and resources.</p>
-  </div>
-  
+
 <div class="framework-grid">
 <!-- Card 1: Lifecycle Stages -->
 <div class="framework-section">
@@ -142,16 +140,10 @@ h2 {
 <!-- Toolkit Downloads -->
 <div class="toolkit-section">
 <h3>Open Source Toolkit Downloads</h3>
-<div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
-  <div style="flex: 1 1 45%; background: #f8f9fa; padding: 1rem; border-radius: 8px; text-align: center;">
-    <strong>Dynamic Consent Dashboard Template</strong><br>(Coming Soon)
-  </div>
-  <div style="flex: 1 1 45%; background: #f8f9fa; padding: 1rem; border-radius: 8px; text-align: center;">
-    <strong>Risk Audit Worksheet</strong><br>(Coming Soon)
-  </div>
-  <div style="flex: 1 1 45%; background: #f8f9fa; padding: 1rem; border-radius: 8px; text-align: center;">
-    <strong>Cyber Incident Response Playbook</strong><br>(Coming Soon)
-  </div>
+<div>
+  <div><strong>Dynamic Consent Dashboard Template</strong><br>(Coming Soon)</div>
+  <div><strong>Risk Audit Worksheet</strong><br>(Coming Soon)</div>
+  <div><strong>Cyber Incident Response Playbook</strong><br>(Coming Soon)</div>
 </div>
 </div>
 </section>
@@ -168,9 +160,7 @@ h2 {
 </ul>
 </section>
 
-<!-- SCRIPT Placeholder -->
 <script>
-// <script>
 function getContent(id) {
 const content = {
 'problem-definition': {
@@ -199,7 +189,7 @@ title: 'Deployment & Integration',
 description: 'Align AI tool workflows to clinical practice standards, embed human-in-the-loop review, and ensure clearly delineated liability pathways.',
 recommendations: ['Pilot tools iteratively before full deployment.', 'Document shared clinical responsibility models.', 'Train users on fallback processes.'],
 risks: [{ risk: 'Poor integration causing decision fatigue.', mitigation: 'Usability testing and iterative refinement during pilots.' }],
-resources: ['<a href="https://www.health.gov.on.ca/en/pro/programs/connectedcare/oht/" target="_blank">Ontario Health Teams Guidance</a>']
+resources: ['<a href="https://jamanetwork.com/journals/jama/fullarticle/2783930" target="_blank">Blueprint for Trustworthy AI in Healthcare (JAMA 2021)</a>']
 },
 'monitoring-updating': {
 title: 'Monitoring & Updating',
@@ -316,8 +306,3 @@ contentBox.classList.add('active');
 }
 }
 </script>
-
-</script>
-
-</body>
-</html>
