@@ -175,8 +175,8 @@ recommendations: [
 risks: [
 { 
 risk: 'Misaligned AI goals leading to unsafe deployments.', 
-example: 'Example: IBM Watson Oncology incorrectly recommending unsafe cancer treatments due to training issues. [Source: Stat News]',
-mitigation: 'Stakeholder-inclusive problem scoping and risk-benefit mapping.' 
+example: 'Example: IBM Watson Oncology incorrectly recommending unsafe cancer treatments due to training data flaws. [Source: Stat News]',
+mitigation: 'Stakeholder-inclusive problem scoping and risk-benefit mapping.'
 }
 ],
 resources: [
@@ -194,8 +194,8 @@ recommendations: [
 risks: [
 { 
 risk: 'Training AI on biased or incomplete datasets.', 
-example: 'Example: COVID-19 models underperformed for racial minorities due to biased datasets. [Source: Health Affairs]',
-mitigation: 'Mandatory pre-training data quality and equity audits.' 
+example: 'Example: COVID-19 risk models underperformed for racial minorities due to biased datasets. [Source: Health Affairs]',
+mitigation: 'Mandatory pre-training data quality and equity audits.'
 }
 ],
 resources: [
@@ -213,8 +213,8 @@ recommendations: [
 risks: [
 { 
 risk: 'Opaque models causing clinician distrust.', 
-example: 'Example: Google diabetic retinopathy AI failed in Thailand due to image quality gaps. [Source: Nature]',
-mitigation: 'Human-readable model rationales and layered validation.' 
+example: 'Example: Google diabetic retinopathy AI failed in Thailand due to image quality issues. [Source: Nature]',
+mitigation: 'Human-readable model rationales and layered validation.'
 }
 ],
 resources: [
@@ -232,8 +232,8 @@ recommendations: [
 risks: [
 { 
 risk: 'Poor integration causing decision fatigue.', 
-example: 'Example: Epic sepsis AI caused alarm fatigue and was ignored by clinicians. [Source: STAT News]',
-mitigation: 'Usability testing and iterative refinement during pilots.' 
+example: 'Example: Epic sepsis AI triggered unnecessary alerts, overwhelming clinicians. [Source: STAT News]',
+mitigation: 'Usability testing and iterative refinement during pilots.'
 }
 ],
 resources: [
@@ -251,8 +251,8 @@ recommendations: [
 risks: [
 { 
 risk: 'Unnoticed performance decay harming patients.', 
-example: 'Example: Stroke prediction AI degraded without monitoring in the UK. [Source: NIHR]',
-mitigation: 'Post-deployment monitoring and drift-triggered audits.' 
+example: 'Example: Stroke prediction models deteriorated without monitoring. [Source: NIHR]',
+mitigation: 'Post-deployment monitoring and drift-triggered audits.'
 }
 ],
 resources: [
@@ -270,8 +270,8 @@ recommendations: [
 risks: [
 { 
 risk: 'Outdated AI continuing unnoticed.', 
-example: 'Example: Antibiotic decision tools stayed live despite resistance shifts. [Source: BMJ]',
-mitigation: 'Scheduled decommissioning audits and sunset reviews.' 
+example: 'Example: Antibiotic support tools failed to update to resistance patterns. [Source: BMJ]',
+mitigation: 'Scheduled decommissioning audits and sunset reviews.'
 }
 ],
 resources: [
@@ -289,8 +289,8 @@ recommendations: [
 risks: [
 { 
 risk: 'Loss of patient trust due to opaque data sharing.', 
-example: 'Example: DeepMind Royal Free Trust used patient data without transparency. [Source: The Guardian]',
-mitigation: 'Radical transparency and consent renewals.' 
+example: 'Example: DeepMind Royal Free partnership lacked patient consent. [Source: The Guardian]',
+mitigation: 'Radical transparency and consent renewals.'
 }
 ],
 resources: [
@@ -308,8 +308,8 @@ recommendations: [
 risks: [
 { 
 risk: 'No clear accountability during AI-caused harm events.', 
-example: 'Example: Complex liability after clinical discharge errors from AI. [Source: Reuters]',
-mitigation: 'Pre-deployment contractual accountability frameworks.' 
+example: 'Example: Clinical misdiagnosis legal battles post-AI error. [Source: Reuters]',
+mitigation: 'Pre-deployment contractual accountability frameworks.'
 }
 ],
 resources: [
@@ -327,8 +327,8 @@ recommendations: [
 risks: [
 { 
 risk: 'Secondary use of data without reconsent.', 
-example: 'Example: Mental health apps shared private disclosures without user consent. [Source: Washington Post]',
-mitigation: 'Dynamic consent linked to data-use auditing tools.' 
+example: 'Example: Mental health apps leaked private user conversations. [Source: Washington Post]',
+mitigation: 'Dynamic consent linked to data-use auditing tools.'
 }
 ],
 resources: [
@@ -345,13 +345,13 @@ recommendations: [
 ],
 risks: [
 { 
-risk: 'Model poisoning or privacy breach attacks.', 
-example: 'Example: 2021 ransomware attack shut down Ireland\'s health services. [Source: BBC]',
-mitigation: 'Periodic penetration testing and model robustness scoring.' 
+risk: 'Model poisoning or cyberattacks.', 
+example: 'Example: 2021 ransomware attack shut down Ireland\'s health systems. [Source: BBC]',
+mitigation: 'Periodic penetration testing and incident response protocols.'
 }
 ],
 resources: [
-'<a href="https://www.iso.org/standard/81228.html" target="_blank">ISO/IEC 42001 Security for AI Systems</a>'
+'<a href="https://www.iso.org/standard/81228.html" target="_blank">ISO/IEC 42001 AI Security Standards</a>'
 ]
 },
 'legislative-reforms': {
@@ -360,17 +360,17 @@ description: 'Modernize PHIPA/PIPEDA and national healthcare regulations to addr
 recommendations: [
 'Create risk-tiered AI regulatory pathways.',
 'Mandate dynamic consent and lifecycle compliance checks.',
-'Update data protection laws to account for continuously learning systems.'
+'Update data protection laws to account for evolving AI models.'
 ],
 risks: [
 { 
-risk: 'Static regulations failing against dynamic AI risks.', 
-example: 'Example: Theranos exploited outdated lab oversight structures. [Source: New York Times]',
-mitigation: 'Periodic re-evaluation of AI regulations.' 
+risk: 'Static regulations failing to adapt to AI.', 
+example: 'Example: Regulatory lag allowed Theranos to operate without scrutiny. [Source: New York Times]',
+mitigation: 'Mandatory periodic AI policy updates.'
 }
 ],
 resources: [
-'<a href="https://www.canada.ca/en/health-canada/services/health-canada-modernization/artificial-intelligence.html" target="_blank">Health Canada AI Policy Strategy</a>'
+'<a href="https://www.canada.ca/en/health-canada/services/health-canada-modernization/artificial-intelligence.html" target="_blank">Health Canada AI Strategy</a>'
 ]
 },
 'system-supports': {
@@ -378,28 +378,47 @@ title: 'System Implementation Supports',
 description: 'Establish governance councils, AI health sandboxes, and open-source toolkits to operationalize safe and ethical AI healthcare innovation.',
 recommendations: [
 'Fund national AI health sandboxes for real-world testing.',
-'Support Health Canada and CIHR advisory groups.',
+'Support Health Canada and CIHR advisory councils.',
 'Distribute open-source risk audit and consent management tools.'
 ],
 risks: [
 { 
-risk: 'Fragmented, inconsistent local AI governance across regions.', 
-example: 'Example: Disjointed COVID-19 chatbot deployments across Europe. [Source: Lancet Digital Health]',
-mitigation: 'Pan-Canadian governance council establishment and toolkit sharing.' 
+risk: 'Fragmented, inconsistent local AI governance.', 
+example: 'Example: Disjointed chatbot deployments during COVID-19. [Source: Lancet Digital Health]',
+mitigation: 'Pan-Canadian governance council coordination.'
 }
 ],
 resources: [
-'<a href="https://cihr-irsc.gc.ca/e/193.html" target="_blank">CIHR AI Health Initiatives</a>'
+'<a href="https://cihr-irsc.gc.ca/e/193.html" target="_blank">CIHR AI Health Research</a>'
 ]
 }
 };
 return content[id];
 }
 
+function getButtonLabel(id) {
+const labelMap = {
+'problem-definition': 'Problem Definition',
+'data-collection': 'Data Collection',
+'model-development': 'Model Development',
+'deployment-integration': 'Deployment & Integration',
+'monitoring-updating': 'Monitoring & Updating',
+'decommissioning': 'Decommissioning',
+'data-ownership': 'Data Ownership & Stewardship',
+'liability': 'Liability & Accountability',
+'privacy-consent': 'Patient Privacy & Consent',
+'cybersecurity-resilience': 'Cybersecurity & Resilience',
+'legislative-reforms': 'Legislative and Regulatory Reforms',
+'system-supports': 'System Implementation Supports'
+};
+return labelMap[id];
+}
+
 function showContent(id) {
 const contentBox = document.getElementById('content-box');
 const content = getContent(id);
 
+// Reset highlights
 const allItems = document.querySelectorAll('.framework-item');
 allItems.forEach(item => {
 item.classList.remove('active');
@@ -407,7 +426,8 @@ const arrow = item.querySelector('.arrow');
 if (arrow) arrow.remove();
 });
 
-const clickedItem = Array.from(allItems).find(item => item.innerText.trim() === content.title);
+// Highlight current
+const clickedItem = Array.from(allItems).find(item => item.innerText.trim() === getButtonLabel(id));
 if (clickedItem) {
 clickedItem.classList.add('active');
 let arrow = document.createElement('span');
@@ -416,6 +436,7 @@ arrow.innerHTML = '➔';
 clickedItem.appendChild(arrow);
 }
 
+// Expand content
 if (content) {
 contentBox.innerHTML = `
 <h3>${content.title}</h3>
@@ -430,4 +451,3 @@ contentBox.classList.add('active');
 }
 }
 </script>
-
