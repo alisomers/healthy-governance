@@ -171,25 +171,195 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; line-height: 
 <script>
 function getContent(id) {
   const content = {
-    // (all your content blocks are here exactly like before)
-    // No change to the full getContent database
-    // --- Keeping content loaded exactly from our last complete version ---
-    'problem-definition': { title: 'Problem Definition', description: '...', recommendations: [...], risks: [...], resources: [...] },
-    'data-collection': { title: 'Data Collection', description: '...', recommendations: [...], risks: [...], resources: [...] },
-    'model-development': { title: 'Model Development', description: '...', recommendations: [...], risks: [...], resources: [...] },
-    'deployment-integration': { title: 'Deployment & Integration', description: '...', recommendations: [...], risks: [...], resources: [...] },
-    'monitoring-updating': { title: 'Monitoring & Updating', description: '...', recommendations: [...], risks: [...], resources: [...] },
-    'decommissioning': { title: 'Decommissioning', description: '...', recommendations: [...], risks: [...], resources: [...] },
-    'data-ownership': { title: 'Data Ownership & Stewardship', description: '...', recommendations: [...], risks: [...], resources: [...] },
-    'liability': { title: 'Liability & Accountability', description: '...', recommendations: [...], risks: [...], resources: [...] },
-    'privacy-consent': { title: 'Patient Privacy & Consent', description: '...', recommendations: [...], risks: [...], resources: [...] },
-    'cybersecurity-resilience': { title: 'Cybersecurity & Resilience', description: '...', recommendations: [...], risks: [...], resources: [...] },
-    'legislative-reforms': { title: 'Legislative and Regulatory Reforms', description: '...', recommendations: [...], risks: [...], resources: [...] },
-    'system-supports': { title: 'System Implementation Supports', description: '...', recommendations: [...], risks: [...], resources: [...] }
-  };
-  return content[id];
+   // Lifecycle Stages
+'problem-definition': {
+  title: 'Problem Definition',
+  description: 'Define the clinical problems AI will address, involving diverse stakeholders to align objectives with patient safety, ethics, and care quality.',
+  recommendations: [
+    'Establish multi-disciplinary advisory groups early.',
+    'Conduct pre-design ethics and equity reviews.',
+    'Define acceptable risk thresholds.'
+  ],
+  risks: [
+    { risk: 'Misaligned AI goals leading to unsafe deployments.', mitigation: 'Stakeholder-inclusive problem scoping and risk-benefit mapping.' }
+  ],
+  resources: [
+    '<a href="https://oecd.ai/en/dashboards" target="_blank">OECD AI Guidelines</a>'
+  ]
+},
+'data-collection': {
+  title: 'Data Collection',
+  description: 'Ensure data sourcing is representative, bias-audited, and consented under dynamic governance models supporting patient control.',
+  recommendations: [
+    'Perform bias audits at collection phase.',
+    'Implement dynamic consent frameworks.',
+    'Maintain detailed provenance logs.'
+  ],
+  risks: [
+    { risk: 'Training AI on biased or incomplete datasets.', mitigation: 'Mandatory pre-training data quality and equity audits.' }
+  ],
+  resources: [
+    '<a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank">NIST AI Risk Management Framework</a>'
+  ]
+},
+'model-development': {
+  title: 'Model Development',
+  description: 'Prioritize explainability, transparency, and multi-site validation to mitigate overfitting and support safe, reliable AI in healthcare settings.',
+  recommendations: [
+    'Integrate explainability-by-design.',
+    'Externally validate models before use.',
+    'Disclose model assumptions, risks, and biases.'
+  ],
+  risks: [
+    { risk: 'Opaque models causing clinician distrust or inappropriate reliance.', mitigation: 'Human-readable model rationales and layered validation.' }
+  ],
+  resources: [
+    '<a href="https://www.iso.org/standard/81228.html" target="_blank">ISO/IEC 42001 AI Standard</a>'
+  ]
+},
+'deployment-integration': {
+  title: 'Deployment & Integration',
+  description: 'Align AI tool workflows to clinical practice standards, embed human-in-the-loop review, and ensure clearly delineated liability pathways.',
+  recommendations: [
+    'Pilot tools iteratively before full deployment.',
+    'Document shared clinical responsibility models.',
+    'Train users on fallback processes.'
+  ],
+  risks: [
+    { risk: 'Poor integration leading to decision fatigue or errors.', mitigation: 'Usability testing and iterative refinement during pilots.' }
+  ],
+  resources: [
+    '<a href="https://www.health.gov.on.ca/en/pro/programs/connectedcare/oht/" target="_blank">Ontario Health Teams Guidance</a>'
+  ]
+},
+'monitoring-updating': {
+  title: 'Monitoring & Updating',
+  description: 'Mandate continuous post-market surveillance, model drift detection, and re-validation against evolving clinical standards.',
+  recommendations: [
+    'Annual real-world performance revalidation.',
+    'Implement automated drift alarms.',
+    'Mandate incident reporting linked to AI performance.'
+  ],
+  risks: [
+    { risk: 'Unnoticed performance decay harming patients.', mitigation: 'Post-deployment monitoring and drift-triggered audits.' }
+  ],
+  resources: [
+    '<a href="https://www.who.int/publications/i/item/9789240029200" target="_blank">WHO AI Governance Guidelines</a>'
+  ]
+},
+'decommissioning': {
+  title: 'Decommissioning',
+  description: 'Create responsible sunset plans for AI systems, ensuring safe retirement and transition without compromising patient care continuity.',
+  recommendations: [
+    'Publish decommissioning criteria at launch.',
+    'Notify patients/providers of AI retirement.',
+    'Securely archive AI models and outputs.'
+  ],
+  risks: [
+    { risk: 'Outdated AI continuing unnoticed.', mitigation: 'Scheduled decommissioning audits and sunset reviews.' }
+  ],
+  resources: [
+    '<a href="https://www.canada.ca/en/government/system-digital/artificial-intelligence.html" target="_blank">Canada Digital Government AI Policy</a>'
+  ]
+},
+// Governance Pillars
+'data-ownership': {
+  title: 'Data Ownership & Stewardship',
+  description: 'Ensure patients retain control over their health data throughout AI development, deployment, and use.',
+  recommendations: [
+    'Support patient consent dashboards.',
+    'Build federated, privacy-preserving data architectures.',
+    'Track all data use/access logs transparently.'
+  ],
+  risks: [
+    { risk: 'Loss of patient trust due to opaque data sharing.', mitigation: 'Radical transparency and consent renewals.' }
+  ],
+  resources: [
+    '<a href="https://oecd.ai/en/dashboards/canada" target="_blank">OECD AI Dashboard: Canada</a>'
+  ]
+},
+'liability': {
+  title: 'Liability & Accountability',
+  description: 'Assign clear shared liability across AI developers, vendors, institutions, and clinical users with enforceable contracts.',
+  recommendations: [
+    'Mandate shared liability frameworks.',
+    'Define human fallback oversight responsibilities.',
+    'Insurance policies tailored to AI-related incidents.'
+  ],
+  risks: [
+    { risk: 'No clear accountability during AI-caused harm events.', mitigation: 'Pre-deployment contractual accountability frameworks.' }
+  ],
+  resources: [
+    '<a href="https://www.iso.org/obp/ui#iso:std:iso-iec:27001:ed-2:v1:en" target="_blank">ISO/IEC 27001 Security Standards</a>'
+  ]
+},
+'privacy-consent': {
+  title: 'Patient Privacy & Consent',
+  description: 'Implement dynamic, tiered consent to allow patients ongoing control over how their data is used in evolving AI systems.',
+  recommendations: [
+    'Deploy patient-facing consent portals.',
+    'Enable granular opt-outs by service or dataset.',
+    'Audit consent use compliance annually.'
+  ],
+  risks: [
+    { risk: 'Secondary use of data without patient reconsent.', mitigation: 'Dynamic consent linked to data-use auditing tools.' }
+  ],
+  resources: [
+    '<a href="https://gdpr.eu/" target="_blank">GDPR Privacy by Design</a>'
+  ]
+},
+'cybersecurity-resilience': {
+  title: 'Cybersecurity & Resilience',
+  description: 'Harden AI systems against adversarial attacks, model tampering, and cyber vulnerabilities at every lifecycle stage.',
+  recommendations: [
+    'Mandate adversarial robustness testing.',
+    'Develop AI-specific cyber incident response plans.',
+    'Isolate and encrypt sensitive AI models.'
+  ],
+  risks: [
+    { risk: 'Model poisoning or privacy breach attacks.', mitigation: 'Periodic penetration testing and model robustness scoring.' }
+  ],
+  resources: [
+    '<a href="https://www.iso.org/standard/81228.html" target="_blank">ISO/IEC 42001 Security for AI Systems</a>'
+  ]
+},
+// Policy Recommendations
+'legislative-reforms': {
+  title: 'Legislative and Regulatory Reforms',
+  description: 'Modernize PHIPA/PIPEDA and national healthcare regulations to address AI-specific challenges in liability, privacy, and post-deployment accountability.',
+  recommendations: [
+    'Create risk-tiered AI regulatory pathways.',
+    'Mandate dynamic consent and lifecycle compliance checks.',
+    'Update data protection laws to account for continuously learning systems.'
+  ],
+  risks: [
+    { risk: 'Static regulations failing against dynamic AI risks.', mitigation: 'Laws requiring periodic AI policy re-evaluation tied to technical developments.' }
+  ],
+  resources: [
+    '<a href="https://www.canada.ca/en/health-canada/services/health-canada-modernization/artificial-intelligence.html" target="_blank">Health Canada AI Policy Strategy</a>'
+  ]
+},
+'system-supports': {
+  title: 'System Implementation Supports',
+  description: 'Establish governance councils, AI health sandboxes, and open-source toolkits to operationalize safe and ethical AI healthcare innovation.',
+  recommendations: [
+    'Fund national AI health sandboxes for real-world testing.',
+    'Support Health Canada and CIHR advisory groups.',
+    'Distribute open-source risk audit and consent management tools.'
+  ],
+  risks: [
+    { risk: 'Fragmented, inconsistent local AI governance across regions.', mitigation: 'Pan-Canadian governance council establishment and toolkit sharing.' }
+  ],
+  resources: [
+    '<a href="https://cihr-irsc.gc.ca/e/193.html" target="_blank">CIHR AI Health Initiatives</a>'
+  ]
+}
+}; // Close content database
+
+return content[id];
 }
 
+// Maps ID to button labels
 function getButtonLabel(id) {
   const labelMap = {
     'problem-definition': 'Problem Definition',
@@ -208,11 +378,12 @@ function getButtonLabel(id) {
   return labelMap[id];
 }
 
+// Main showContent function
 function showContent(id) {
   const contentBox = document.getElementById('content-box');
   const content = getContent(id);
 
-  // Remove all previous active highlights and arrows
+  // Reset all buttons
   const allItems = document.querySelectorAll('.framework-item');
   allItems.forEach(item => {
     item.classList.remove('active');
@@ -220,7 +391,7 @@ function showContent(id) {
     if (arrow) arrow.remove();
   });
 
-  // Find and highlight the clicked item
+  // Highlight selected
   const clickedItem = Array.from(allItems).find(item => item.innerText.trim() === getButtonLabel(id));
   if (clickedItem) {
     clickedItem.classList.add('active');
@@ -263,3 +434,4 @@ function showContent(id) {
   }
 }
 </script>
+
