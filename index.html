@@ -162,7 +162,6 @@ h2 { font-size: 2rem; margin-bottom: 1.5rem; font-weight: bold; color: #1a1a1a; 
 </section>
 
 <script>
-<script>
 function getContent(id) {
 const content = {
 'problem-definition': {
@@ -175,7 +174,8 @@ recommendations: [
 ],
 risks: [
 { 
-risk: 'Misaligned AI goals leading to unsafe deployments (e.g., IBM Watson Oncology incorrectly recommending unsafe cancer treatments due to misaligned training data) — [Source: Stat News]', 
+risk: 'Misaligned AI goals leading to unsafe deployments.', 
+example: 'Example: IBM Watson Oncology incorrectly recommending unsafe cancer treatments due to training issues. [Source: Stat News]',
 mitigation: 'Stakeholder-inclusive problem scoping and risk-benefit mapping.' 
 }
 ],
@@ -193,7 +193,8 @@ recommendations: [
 ],
 risks: [
 { 
-risk: 'Training AI on biased or incomplete datasets (e.g., COVID-19 risk models underperforming on racial minorities due to non-representative data) — [Source: Health Affairs]', 
+risk: 'Training AI on biased or incomplete datasets.', 
+example: 'Example: COVID-19 models underperformed for racial minorities due to biased datasets. [Source: Health Affairs]',
 mitigation: 'Mandatory pre-training data quality and equity audits.' 
 }
 ],
@@ -211,7 +212,8 @@ recommendations: [
 ],
 risks: [
 { 
-risk: 'Opaque models causing clinician distrust (e.g., Google Health diabetic retinopathy AI failed in Thailand due to image quality differences) — [Source: Nature]', 
+risk: 'Opaque models causing clinician distrust.', 
+example: 'Example: Google diabetic retinopathy AI failed in Thailand due to image quality gaps. [Source: Nature]',
 mitigation: 'Human-readable model rationales and layered validation.' 
 }
 ],
@@ -229,14 +231,16 @@ recommendations: [
 ],
 risks: [
 { 
-risk: 'Poor integration causing decision fatigue (e.g., Epic sepsis prediction AI caused alarm fatigue and reduced clinical attention) — [Source: STAT News]', 
+risk: 'Poor integration causing decision fatigue.', 
+example: 'Example: Epic sepsis AI caused alarm fatigue and was ignored by clinicians. [Source: STAT News]',
 mitigation: 'Usability testing and iterative refinement during pilots.' 
 }
 ],
 resources: [
 '<a href="https://nam.edu/artificial-intelligence-special-publication/" target="_blank">NAM AI Deployment Blueprint</a>'
 ]
-  'monitoring-updating': {
+},
+'monitoring-updating': {
 title: 'Monitoring & Updating',
 description: 'Mandate continuous post-market surveillance, model drift detection, and re-validation against evolving clinical standards.',
 recommendations: [
@@ -246,7 +250,8 @@ recommendations: [
 ],
 risks: [
 { 
-risk: 'Unnoticed performance decay harming patients (e.g., Stroke prediction algorithms degraded over time without active monitoring in the UK) — [Source: NIHR]', 
+risk: 'Unnoticed performance decay harming patients.', 
+example: 'Example: Stroke prediction AI degraded without monitoring in the UK. [Source: NIHR]',
 mitigation: 'Post-deployment monitoring and drift-triggered audits.' 
 }
 ],
@@ -264,7 +269,8 @@ recommendations: [
 ],
 risks: [
 { 
-risk: 'Outdated AI continuing unnoticed (e.g., Clinical decision support tools for antibiotics remained active despite resistance changes) — [Source: BMJ]', 
+risk: 'Outdated AI continuing unnoticed.', 
+example: 'Example: Antibiotic decision tools stayed live despite resistance shifts. [Source: BMJ]',
 mitigation: 'Scheduled decommissioning audits and sunset reviews.' 
 }
 ],
@@ -282,7 +288,8 @@ recommendations: [
 ],
 risks: [
 { 
-risk: 'Loss of patient trust due to opaque data sharing (e.g., DeepMind Royal Free case where patients weren’t informed) — [Source: The Guardian]', 
+risk: 'Loss of patient trust due to opaque data sharing.', 
+example: 'Example: DeepMind Royal Free Trust used patient data without transparency. [Source: The Guardian]',
 mitigation: 'Radical transparency and consent renewals.' 
 }
 ],
@@ -300,13 +307,15 @@ recommendations: [
 ],
 risks: [
 { 
-risk: 'No clear accountability during AI-caused harm events (e.g., Medical discharge errors caused complex legal battles) — [Source: Reuters]', 
+risk: 'No clear accountability during AI-caused harm events.', 
+example: 'Example: Complex liability after clinical discharge errors from AI. [Source: Reuters]',
 mitigation: 'Pre-deployment contractual accountability frameworks.' 
 }
 ],
 resources: [
 '<a href="https://www.iso.org/obp/ui#iso:std:iso-iec:27001:ed-2:v1:en" target="_blank">ISO/IEC 27001 Security Standards</a>'
 ]
+},
 'privacy-consent': {
 title: 'Patient Privacy & Consent',
 description: 'Implement dynamic, tiered consent to allow patients ongoing control over how their data is used in evolving AI systems.',
@@ -317,7 +326,8 @@ recommendations: [
 ],
 risks: [
 { 
-risk: 'Secondary use of data without reconsent (e.g., Mental health chatbots sharing user data with third parties) — [Source: Washington Post]', 
+risk: 'Secondary use of data without reconsent.', 
+example: 'Example: Mental health apps shared private disclosures without user consent. [Source: Washington Post]',
 mitigation: 'Dynamic consent linked to data-use auditing tools.' 
 }
 ],
@@ -335,7 +345,8 @@ recommendations: [
 ],
 risks: [
 { 
-risk: 'Model poisoning or privacy breach attacks (e.g., 2021 ransomware attack on Ireland’s Health Service Executive) — [Source: BBC]', 
+risk: 'Model poisoning or privacy breach attacks.', 
+example: 'Example: 2021 ransomware attack shut down Ireland\'s health services. [Source: BBC]',
 mitigation: 'Periodic penetration testing and model robustness scoring.' 
 }
 ],
@@ -353,8 +364,9 @@ recommendations: [
 ],
 risks: [
 { 
-risk: 'Static regulations failing against dynamic AI risks (e.g., Regulatory gaps during the Theranos scandal) — [Source: New York Times]', 
-mitigation: 'Laws requiring periodic AI policy re-evaluation tied to technical developments.' 
+risk: 'Static regulations failing against dynamic AI risks.', 
+example: 'Example: Theranos exploited outdated lab oversight structures. [Source: New York Times]',
+mitigation: 'Periodic re-evaluation of AI regulations.' 
 }
 ],
 resources: [
@@ -371,7 +383,8 @@ recommendations: [
 ],
 risks: [
 { 
-risk: 'Fragmented, inconsistent local AI governance across regions (e.g., Disjointed COVID-19 chatbot deployments across Europe) — [Source: Lancet Digital Health]', 
+risk: 'Fragmented, inconsistent local AI governance across regions.', 
+example: 'Example: Disjointed COVID-19 chatbot deployments across Europe. [Source: Lancet Digital Health]',
 mitigation: 'Pan-Canadian governance council establishment and toolkit sharing.' 
 }
 ],
@@ -383,29 +396,10 @@ resources: [
 return content[id];
 }
 
-function getButtonLabel(id) {
-const labelMap = {
-'problem-definition': 'Problem Definition',
-'data-collection': 'Data Collection',
-'model-development': 'Model Development',
-'deployment-integration': 'Deployment & Integration',
-'monitoring-updating': 'Monitoring & Updating',
-'decommissioning': 'Decommissioning',
-'data-ownership': 'Data Ownership & Stewardship',
-'liability': 'Liability & Accountability',
-'privacy-consent': 'Patient Privacy & Consent',
-'cybersecurity-resilience': 'Cybersecurity & Resilience',
-'legislative-reforms': 'Legislative and Regulatory Reforms',
-'system-supports': 'System Implementation Supports'
-};
-return labelMap[id];
-}
-
 function showContent(id) {
 const contentBox = document.getElementById('content-box');
 const content = getContent(id);
 
-// Reset
 const allItems = document.querySelectorAll('.framework-item');
 allItems.forEach(item => {
 item.classList.remove('active');
@@ -413,8 +407,7 @@ const arrow = item.querySelector('.arrow');
 if (arrow) arrow.remove();
 });
 
-// Highlight clicked
-const clickedItem = Array.from(allItems).find(item => item.innerText.trim() === getButtonLabel(id));
+const clickedItem = Array.from(allItems).find(item => item.innerText.trim() === content.title);
 if (clickedItem) {
 clickedItem.classList.add('active');
 let arrow = document.createElement('span');
@@ -423,14 +416,13 @@ arrow.innerHTML = '➔';
 clickedItem.appendChild(arrow);
 }
 
-// Show content
 if (content) {
 contentBox.innerHTML = `
 <h3>${content.title}</h3>
 <div class="content-grid">
 <div><h4>Description</h4><p>${content.description}</p></div>
 <div><h4>Recommendations</h4><ul>${content.recommendations.map(rec => `<li>${rec}</li>`).join('')}</ul></div>
-<div><h4>Risks & Mitigations</h4>${content.risks.map(risk => `<div><p><strong>Risk:</strong> ${risk.risk}</p><p><strong>Mitigation:</strong> ${risk.mitigation}</p></div>`).join('')}</div>
+<div><h4>Risks & Mitigations</h4><div><p><strong>Risk:</strong> ${content.risks[0].risk}</p><p><strong>${content.risks[0].example}</strong></p><p><strong>Mitigation:</strong> ${content.risks[0].mitigation}</p></div></div>
 <div><h4>Resources</h4>${content.resources.map(resource => `<p>${resource}</p>`).join('')}</div>
 </div>
 `;
@@ -438,5 +430,4 @@ contentBox.classList.add('active');
 }
 }
 </script>
-
 
